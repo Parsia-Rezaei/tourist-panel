@@ -450,62 +450,83 @@ input[type="search"]{
   }
 
   /* side bar styles  */
-
-  .sidebar_fixed {
-    @apply w-[270px] bg-[#211e29] h-[100vh]  fixed bottom-0  overflow-y-scroll z-[10000];
+  #sidebar {
+    @apply z-[1000] fixed translate-x-full lg:translate-x-0 bottom-0 top-0 lg:top-[87px] bg-[#211E29]  duration-300 w-[280px] h-[100vh] overflow-y-auto pb-20;
   }
-  .sidebar-accordion-box {
-    @apply hidden duration-500 mt-2 flex-col rounded-lg gap-2 bg-[#2d283e];
-  }
-  .sidebar-accordion-box.active{
-    @apply flex ;
-  }
-  .sidebar-button__chevron-down{
-    @apply absolute fill-primary-200 left-[10px] duration-300;
-  }
-  .sidebar-btn{
-    @apply inline-flex items-center justify-center p-2 text-black bg-gray-300 rounded-md hover:bg-opacity-75 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2;
+  #sidebar.active {
+    @apply translate-x-0 ;
   }
 
-  .sidebar-message_icon {
-    @apply hover:text-[#3855bb] duration-200 badge  text-gray-200 absolute top-[5px] text-[30px] right-[20px];
+  .sidebar-wrapper {
+    @apply p-5 relative;
+  }
+  .sidebar-header {
+    @apply flex flex-col items-center gap-3 relative pb-4 border-b border-b-gray-300;
+  }
+  .sidebar-header img {
+    @apply rounded-full w-[80px] h-[80px] object-cover;
+  }
+  .sidebar-username {
+    @apply text-white font-bold text-[16px];
+  }
+  .sidebar-content {
+    @apply mt-5;
+  }
+  .sidebar-links-container {
+      @apply flex flex-col gap-3 items-start;
+  }
+  .sidebar-link {
+    @apply w-full
+  }
+  .sidebar-link a {
+    @apply flex items-center gap-3 text-white text-[14px] py-2 px-4 rounded-lg duration-200 hover:bg-primary-500;
+  }
+  .sidebar-link a.active {
+    @apply bg-primary-500;
+  }
+  .sidebar-link a ion-icon {
+    @apply text-[20px]
+  }
+  .sidebar-footer {
+    @apply py-4 mt-5 border-t border-t-gray-300;
+  }
+  .sidebar-cart-button {
+    @apply absolute top-[20px] right-[20px] text-white hover:text-primary-500 duration-300;
+  }
+  .sidebar-cart-button ion-icon {
+    @apply text-[30px];
+  }
+  .sidebar-cart-button::after {
+    content: '';
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+  }
+  .sidebar-btn {
+    @apply bg-gray-300 rounded-md p-3;
+  }
+  .bg-overlay {
+    @apply bg-white hidden duration-300 backdrop-blur-sm z-[1000] bg-opacity-50 h-[100vh] w-[100vw] fixed top-0 left-0;
+  }
+  .bg-overlay.active{
+    @apply block;
   }
 
-  .sidebar-exit_button {
-    @apply text-[30px] absolute  text-gray-200 hover:opacity-75 duration-200 left-[20px] top-[5px];
-  }
-
-  .sidebar-accordion_button {
-    @apply text-[13px] font-medium rounded-l-md relative py-2 px-3 w-full flex items-center hover:text-white gap-2 text-[#7d7f8e]  hover:bg-primary-600 duration-200;
-  }
-  .sidebar-accordion-menu-btn{
-    @apply text-[13px] font-medium rounded-l-md relative py-2 px-3 w-full flex items-center hover:text-white gap-2 text-[#7d7f8e]  hover:bg-primary-600 duration-200;
-  }
+  /* .sidebar-change-pic-button {
+    @apply absolute bottom-0 left-0 bg-gray-300 rounded-full h-[30px] w-[30px] flex justify-center items-center;
+  } */
   
-  .sidebar-accordion-button_link {
-    @apply text-[13px] font-medium flex items-center gap-2 rounded-l-md text-gray-400 hover:text-primary-600  duration-300 px-4 py-2;
-  }
-  .sidebar-accordion-button_link__icon{
-    @apply px-1 shrink-0 fill-primary-200;
-  }
-  .sidebar-link_active {
-    @apply bg-[#3855bb]  rounded-l-md text-[13px] font-medium text-white  block py-2  px-3   duration-200;
-  }
-  .sidebar-wrapper{
-    @apply fixed top-0 left-0 w-full h-full bg-gray-100 bg-opacity-50 lg:hidden;
-  }
-  .sidebar-userinfo-container{
-    @apply relative flex flex-col gap-2 pt-5 pe-5 bg-[#211e29] pb-8;
-  }
-  .sidebar-link{
-    @apply pe-3 text-primary-200;
-  }
 
 
   /* main content  */
 
   .main-content {
-    @apply border rounded-md  shadow-md  mr-0 ml-0 px-6 lg:mr-[290px] lg:ml-[20px]  p-5 pb-10 col-auto;
+    @apply border rounded-md  shadow-md  mr-0 ml-0 px-6 lg:mr-[300px] lg:ml-[20px]  p-5 pb-10 col-auto;
   }
   .main-content--responsiveness{
     @apply bg-white border-0  md:shadow-md md:border;

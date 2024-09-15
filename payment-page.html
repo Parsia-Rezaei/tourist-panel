@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>تسویه حساب | تیلویند</title>
-  <link rel="stylesheet" href="../dist/output.css" />
+  <link rel="stylesheet" href="./dist/output.css" />
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
@@ -297,121 +297,121 @@
    </header>
   
       <!-- ==================================== START THE SIDEBAR ============================== -->
-    <aside id="aside" class="hidden lg:block sidebar_fixed">
-      <div
-        class="sidebar-wrapper"
-      ></div>
-      <div class="sidebar-userinfo-container">
-        <div class="flex flex-col items-center justify-center p-4">
-          <img class="w-20 h-20 rounded-md" src="../img/icons8-avatar-96.png" alt="" />
-          <p class="mt-3 text-white">نام کاربری</p>
-          <a href="basket.html">
-            <ion-icon class="sidebar-message_icon" title="سبد خرید " name="cart"></ion-icon>
-          </a>
-          <a href="login-form.html" title="خروج از حساب کاربری" class="cursor-pointer sidebar-exit_button">
-            <ion-icon name="exit-outline"></ion-icon>
-            <span class="sr-only">Exit button</span>
-          </a>
-        </div>
-        <div class="flex flex-col gap-2 mt-4">
-          <a class="sidebar-accordion_button" href="dashboard.html">
-            <ion-icon class="sidebar-link" name="desktop-outline"></ion-icon>
-           داشبورد
-          </a>
-          <a class="sidebar-accordion_button" href="profile-change.html">
-            <ion-icon class="sidebar-link" name="person-outline"></ion-icon>
-            پروفایل
-          </a>
-          <!-- accordion one ==== -->
-          <div class="mt-2 group">
-            <button class="sidebar-accordion-menu-btn">
-              <ion-icon class="sidebar-link" name="shield-checkmark-outline"></ion-icon>
-              پشتیبانی
-              <box-icon class="sidebar-button__chevron-down" name='chevron-down'></box-icon>
-            </button>
-            <!-- ===  accordion box === -->
-            <div class="sidebar-accordion-box">
-              <a class="sidebar-accordion-button_link" href="supporting-tickets.html">
-                <box-icon class="sidebar-accordion-button_link__icon" name='message-square-dots' ></box-icon>
-                ارسال پیام
-              </a>
-              <a class="sidebar-accordion-button_link" href="my-tickets.html">
-                <box-icon class="sidebar-accordion-button_link__icon" name='comment-dots' ></box-icon>
-                پیام های من
-              </a>
-            </div>
+      <div class="bg-overlay"></div>
+      <aside id="sidebar">
+          <div class="sidebar-wrapper">
+              <!-- cart button -->
+               <a href="basket.html" class="sidebar-cart-button">
+                  <ion-icon name="cart"></ion-icon>
+               </a>
+              <!-- sidebar header -->
+               <div class="sidebar-header">
+                  <a href="profile-change.html"><img src="https://picsum.photos/id/1076/600/400" alt=""></a>
+                  <!-- <button class="sidebar-change-pic-button"><ion-icon name="camera-outline"></ion-icon></button> -->
+                  <h2 class="sidebar-username">Parsia rezaei</h2>
+               </div>
+               <!-- sidebar content -->
+                <div class="sidebar-content">
+                   <ul class="sidebar-links-container">
+                      <li class="sidebar-link">
+                         <a href="index.html">
+                          <ion-icon name="home-outline"></ion-icon>
+                          صفحه اصلی
+                         </a>
+                      </li>
+                      <li class="sidebar-link">
+                         <a href="profile-info.html">
+                          <ion-icon name="grid-outline"></ion-icon>
+                          داشبورد
+                         </a>
+                      </li>
+                      <li class="sidebar-link">
+                         <a href="profile-settings.html">
+                          <ion-icon name="cog-outline"></ion-icon>
+                          تنظیمات حساب کاربری
+                         </a>
+                      </li>
+                      <li class="sidebar-link">
+                         <a href="profile-change.html">
+                          <ion-icon name="create-outline"></ion-icon>
+                         ویرایش حساب کاربری
+                         </a>
+                      </li>
+                      <li class="sidebar-link">
+                         <a href="wallet.html">
+                          <ion-icon name="wallet-outline"></ion-icon>
+                          کیف پول دیجیتال
+                         </a>
+                      </li>
+                      <li class="sidebar-link">
+                         <a href="wallet-changes.html">
+                          <ion-icon name="wallet-outline"></ion-icon>
+                          ویرایش کیف پول
+                         </a>
+                      </li>
+                      <li class="sidebar-link">
+                         <a href="saved.html">
+                          <ion-icon name="heart-circle-outline"></ion-icon>
+                          علاقه مندی ها
+                         </a>
+                      </li>
+                      <li class="sidebar-link">
+                         <a href="report.html">
+                          <ion-icon name="document-attach-outline"></ion-icon>
+                          گزارش ها
+                         </a>
+                      </li>
+                      <li class="sidebar-link">
+                         <a href="my-tickets.html">
+                          <ion-icon name="ticket-outline"></ion-icon>
+                          تیکت های من 
+                         </a>
+                      </li>
+                      <li class="sidebar-link">
+                         <a href="supporting-tickets.html">
+                          <ion-icon name="headset-outline"></ion-icon>
+                          پشتیبانی
+                         </a>
+                      </li>
+                      <li class="sidebar-link">
+                         <a href="basket.html">
+                          <ion-icon name="cart-outline"></ion-icon>
+                          سبد خرید
+                         </a>
+                      </li>
+                      <li class="sidebar-link">
+                         <a href="cash-report.html">
+                          <ion-icon name="card-outline"></ion-icon>
+                          گزارش درگاه
+                         </a>
+                      </li>
+                      <li class="sidebar-link">
+                         <a href="payment-page.html">
+                          <ion-icon name="cash-outline"></ion-icon>
+                          تسویه حساب ها
+                         </a>
+                      </li>
+                      <li class="sidebar-link">
+                         <a href="tarakonesh.html">
+                          <ion-icon name="cash-outline"></ion-icon>
+                          تراکنش
+                         </a>
+                      </li>
+                   </ul>
+                </div>
+                <!-- sidebar footer -->
+                 <div class="sidebar-footer">
+                    <ul class="sidebar-links-container">
+                      <li class="sidebar-link">
+                          <a href="about-us.html">
+                              <ion-icon name="people-outline"></ion-icon>
+                               درباره ما   
+                          </a>
+                      </li>
+                    </ul>
+                 </div>
           </div>
-          
-          <!-- ==== accordion one ends here ==== -->
-
-          <a class="sidebar-accordion_button" href="supporting-tickets.html">
-            <ion-icon
-              class="relative top-[3px] sidebar-link"
-              name="ticket-outline"
-            ></ion-icon>
-            تیکت ها
-          </a>
-          <a class="sidebar-accordion_button" href="report.html">
-            <ion-icon class="sidebar-link" name="stats-chart-outline"></ion-icon>
-            گزارش فروش
-          </a>
-        </div>
-
-        <!-- accordion two  ==== -->
-        <div class="mt-2 group">
-          <button class="sidebar-accordion-menu-btn">
-            <ion-icon class="sidebar-link" name="shield-checkmark-outline"></ion-icon>
-            محصولات من
-            <box-icon class="sidebar-button__chevron-down" name='chevron-down'></box-icon>
-          </button>
-        </div>
-        <!-- ==== accordion tow ends here ==== -->
-        <a class="sidebar-accordion_button" href="saved.html">
-          <ion-icon class="sidebar-link" name="stats-chart-outline"></ion-icon>
-          علاقه مندی ها
-        </a>
-          <!-- accordion four  ==== -->
-        <div class="group">
-          <button class="sidebar-accordion-menu-btn">
-            <ion-icon class="sidebar-link" name="cash-outline"></ion-icon>
-            مدیریت مالی
-            <box-icon class="sidebar-button__chevron-down" name='chevron-down'></box-icon>
-          </button>
-          <!-- ===  accordion box === -->
-          <div class="sidebar-accordion-box">
-            <a class="sidebar-accordion-button_link" href="payment-page.html">
-              <box-icon class="sidebar-accordion-button_link__icon" name='wallet-alt' ></box-icon>
-              پرداخت ها
-            </a>
-            <a class="sidebar-accordion-button_link" href="wallet.html" target="_blank">
-              <box-icon class="sidebar-accordion-button_link__icon" name='credit-card-alt' ></box-icon>
-              کیف پول دیجیتال
-            </a>
-            <a class="sidebar-accordion-button_link" href="wallet-changes.html">
-              <box-icon class="sidebar-accordion-button_link__icon" name='money-withdraw'></box-icon>
-              تغییرات کیف پول
-            </a>
-            <a class="sidebar-accordion-button_link" href="payment-page.html">
-              <box-icon class="sidebar-accordion-button_link__icon" name='credit-card-front'></box-icon>
-              تسویه حساب
-            </a>
-            <a class="sidebar-accordion-button_link" href="cash-report.html">
-              <box-icon class="sidebar-accordion-button_link__icon" name='coin-stack'></box-icon>
-             گزارش درگاه
-            </a>
-          </div>
-        </div>
-        <hr />
-        </a>
-        <a class="sidebar-accordion_button" href="about-us.html">
-          <ion-icon
-            class="sidebar-accordion-button_link__icon"
-            name="create-outline"
-          ></ion-icon>
-          درباره ما
-        </a>
-      </div>
-    </aside>
+      </aside>
 
       <!-- ==================== START THE BREAD CRUMB ======================= -->
       <nav

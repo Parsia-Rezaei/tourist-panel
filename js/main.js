@@ -1,4 +1,34 @@
 
+const sidebarBtn = document.querySelector("#sidebar-btn");
+const sidebar = document.querySelector('#sidebar');
+const bgOverlay = document.querySelector(".bg-overlay");
+sidebarBtn.addEventListener("click" , () => {
+    sidebar.classList.add("active");
+    bgOverlay.classList.add('active')
+});
+bgOverlay.addEventListener("click" , () => {
+    sidebar.classList.remove('active');
+    bgOverlay.classList.remove("active")
+})
+
+// sidebar adding active classes
+
+// Get the current HTML file name from the URL
+let currentPath = window.location.pathname.split("/").pop();
+
+
+// Get all sidebar links
+let sidebarLinks = document.querySelectorAll('.sidebar-link a');
+
+// Loop through each link
+sidebarLinks.forEach(link => {
+  let linkPath = link.getAttribute('href');
+  // console.log(linkPath);  
+  if (linkPath === currentPath) {
+    link.classList.add('active');
+  }
+});
+
 
 // navbar functionality 
 
