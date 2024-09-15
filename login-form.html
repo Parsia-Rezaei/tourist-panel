@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  style="
+    background-image: url('../img/main-wallpaper.png');
+    background-attachment: fixed;
+    background-size: cover;
+  "
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ورودبه حساب کاربری | تیلویند</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body dir="rtl">
+    
+    <div class="container mx-auto">
+      <!-- component -->
+        <div class="login-form-container">
+          <div class="relative py-3 px-4 sm:px-10 sm:mx-auto">
+            <div
+              class="login-form-container__background"
+            ></div>
+            <div
+              class="login-form-content-container"
+            >
+              <div class="login-form-content-container__content">
+                <div class="login-form-header">
+                  <img class="w-[40px]" src="../img/Tailwind_CSS_Logo.svg.png" alt="" />
+                  <p class="login-form-header__title">ورود به حساب کاربری</p>
+                </div>
+                <div class="divide-y divide-gray-200">
+                  <div
+                    class="login-form-content-container__content__forms"
+                  >
+                    <div class="relative">
+                      <input
+                        autocomplete="off"
+                        id="user-name"
+                        name="username"
+                        type="text"
+                        class="peer form-input"
+                        placeholder="username"
+                      />
+                      <ion-icon
+                        class="absolute text-gray-500 left-[5px] top-[10px]"
+                        name="person-outline"
+                      ></ion-icon>
+                      <label
+                        for="email"
+                        class="form-input__label"
+                        >نام کاربری</label
+                      >
+                      <div id="username-error" class="input-error">
+                        لطفا نام کاربری رو به درستی وارد نمایید !
+                      </div>
+                    </div>
+                    <div class="relative">
+                      <input
+                        autocomplete="off"
+                        id="password"
+                        name="password"
+                        type="password"
+                        class="peer form-input"
+                        placeholder="Password"
+                      />
+                      <ion-icon id=""
+                        class="absolute cursor-pointer text-gray-500 left-[5px] top-[10px]"
+                        name="eye-outline"
+                      ></ion-icon>
+                      <label
+                        for="password"
+                        class="form-input__label"
+                        >رمزعبور</label
+                      >
+                      <div id="password-error" class="input-error">
+                        رمز عبور خود را به درستی وارد نمایید !
+                      </div>
+                    </div>
+
+                   <!-- remember me checkbox  -->
+
+                    <div class="flex items-center gap-3">
+                      <div class="checkbox-wrapper-form">
+                        <span class="checkbox-form">
+                          <input id="remember-me" type="checkbox">
+                          <svg>
+                            <use xlink:href="#checkbox-form" class="checkbox text-[#4361ee]"></use>
+                          </svg>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+                          <symbol id="checkbox-form" viewBox="0 0 22 22">
+                            <path fill="none" stroke="currentColor" d="M5.5,11.3L9,14.8L20.2,3.3l0,0c-0.5-1-1.5-1.8-2.7-1.8h-13c-1.7,0-3,1.3-3,3v13c0,1.7,1.3,3,3,3h13 c1.7,0,3-1.3,3-3v-13c0-0.4-0.1-0.8-0.3-1.2"></path>
+                          </symbol>
+                        </svg>
+                      </div>
+                      <label class="checkbox-form__label" for="remember-me">مرا به خاطر بسپار</label>
+
+                    </div>
+
+                    <div class="flex justify-center  pt-5">
+
+                      <button id="login-btn"
+                        class="form-button"
+                      >
+                        ورود
+                      </button>
+                    </div>
+                  </div>
+                  <div class="py-3">
+                    <button
+                      class="code-sender-button"
+                    >
+                      <ion-icon name="arrow-back-outline"></ion-icon>
+                      ورود با رمزعبور یکبار مصرف
+                    </button>
+                    <div class="py-3">
+                      <button
+                        class="login-form-link"
+                      >
+                        حساب ندارید؟
+                        <a
+                          class="login-form-link-button"
+                          href="sign-in-form.html"
+                          >ثبت نام کنید</a
+                        >
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+  </body>
+
+   <!-- ======= START THE ALERT =========  -->
+  <div id="error-alert" class="error-alert">
+      <div class="flex items-center gap-4">
+          <i class='bx bx-error error-alert__icon'></i>
+          <div class="error-alert-content">
+              <h4 class="error-alert__title">خطا‌ !</h4>
+              <div class="error-alert__text">
+                  رمز عبور یا نام کاربری نامعتبر است !
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- ======= START THE SUCCESS ALERT =========  -->
+    <div id="success-alert" class="success-alert">
+      <div class="flex items-center gap-4">
+          <i class='bx bx-check-circle success-alert__icon'></i>
+          <div class="success-alert-content">
+              <h4 class="success-alert__title">خوش آمدید کاربر عزیز </h4>
+              <div class="success-alert__text">
+                 ورود شما موفقیت آمیز بود 
+              </div>
+          </div>
+      </div>
+  </div>
+
+  
+  <!-- java script codes -->
+  <script>
+    let formInput = document.getElementsByClassName('form-input');
+    let errorAlert = document.getElementById('error-alert');
+    let formBtn = document.getElementById('login-btn');
+    let successAlert = document.getElementById('success-alert');
+    formBtn.addEventListener('click', () => {
+        let hasEmptyInput = false;
+
+        for (let i = 0; i < formInput.length; i++) {
+            if (formInput[i].value.length === 0) {
+            hasEmptyInput = true;
+            break; // Exit the loop as soon as an empty input is found
+            }
+        }
+
+        if (hasEmptyInput) {
+            errorAlert.classList.add('active');
+            setTimeout(() => {
+            errorAlert.classList.remove('active');
+            }, 3000);
+        } else {
+            successAlert.classList.add('active');
+            setTimeout(() => {
+            successAlert.classList.remove('active');
+            }, 2000);
+        }
+        });
+
+ </script>
+
+  <script>
+    $('[name=eye-outline]').mousedown(function () {
+        $(this).addClass('text-red-600');
+        $('#password').attr('type', 'text');
+    })
+    $('[name=eye-outline]').mouseup(function () {
+        $(this).removeClass('text-red-600');
+        $('#password').attr('type', 'password');
+    })
+    $('[name=eye-outline]').mouseleave(function () {
+        $(this).removeClass('text-red-600');
+        $('#password').attr('type', 'password');
+    })
+</script>
+
+</html>

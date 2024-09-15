@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رسید تراکنش</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link
+      rel="stylesheet"
+      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
+</head>
+<body dir="rtl">
+
+    <div class="container mx-auto px-2">
+        <div class="shadow-md mt-32 max-w-[1400px] mx-auto rounded-md border p-4">
+            <!-- title -->
+            <div class="font-bold flex items-center gap-2 justify-center mb-5">
+                <img class="w-7" src="../img/icons/transaction-history.png" alt="">
+                رسید تراکنش
+            </div>
+            <hr>
+            <!-- transaction information -->
+            <div class="bg-red-500 text-white p-2 rounded-md text-center w-full md:w-1/2 text-[14px] mx-auto mt-10 relative">
+                <ion-icon class="absolute right-[10px] top-[10px]" name="alert-circle-outline"></ion-icon>
+                تراکنش ناموفق بود 
+            </div>
+            <!-- payment warning -->
+            <div class="bg-red-600 relative text-white text-[12px] rounded-md p-2 text-center w-full md:w-1/2 mt-5 mx-auto ">
+                <ion-icon class="text-white absolute top-[10px] px-2 right-[10px]" name="warning"></ion-icon>
+               <p class="px-2"> چنانچه مبلغی از حساب شما کسر شود ظرف حداکثر ۷۲ ساعت آینده به حساب شما برمیگردد</p>
+            </div>
+    
+            <!-- transaction detail -->
+            <div class="bg-white relative py-4 px-5 border border-gray-300 rounded-lg mt-10 mb-10">
+        
+                <div class="text-gray-700 flex justify-between md:justify-evenly text-[14px]">
+                    <div class="flex items-center gap-2">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                        تاریخ : ۱۴۰۲/۱۰/۰۳
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <ion-icon name="cash-outline"></ion-icon>
+                        مبلغ به ریال :۵,۴۹۳,۰۰
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <ion-icon name="card-outline"></ion-icon>
+                        درگاه : بانک ملی 
+                    </div>
+                </div>
+                <!-- type of payment -->
+                <div class="flex  items-center gap-3 mt-10 justify-center">
+                    <img class="w-5" src="../img/icons/money-transfer.png" alt="">
+                    نوع تراکنش : خرید بلیط با پرداخت مستقیم
+                </div>
+                <!-- time expired error -->
+                <div class="bg-red-500 hidden relative text-white text-[12px] rounded-md p-2 text-center w-full md:w-1/2 mt-5 mx-auto ">
+                    <ion-icon class="text-white absolute top-[10px] right-[10px]" name="warning"></ion-icon>
+                    shopping time card expired !
+                </div>
+            </div>
+            <!-- buttons -->
+            <div class="grid grid-cols-3 gap-3">
+                <button class="flex items-center justify-center w-full gap-1 p-2 text-white bg-green-400 rounded-md">
+                    <ion-icon name="print-outline"></ion-icon>
+                    چاپ
+                </button>
+    
+                <button class="flex items-center justify-center w-full gap-1 p-2 text-white bg-blue-400 rounded-md">
+                    <ion-icon name="ticket-outline"></ion-icon>
+                    چاپ بلیط
+                </button>
+    
+                <button class="flex items-center justify-center w-full gap-1 p-2 text-white bg-red-400 rounded-md">
+                    <ion-icon name="return-down-back-outline"></ion-icon>
+                    بازگشت
+                </button>
+    
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

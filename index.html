@@ -1,0 +1,3466 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  style="
+    background-image: url('../img/main-wallpaper.png');
+    background-attachment: fixed;
+    background-size: cover;
+  "
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>صفحه اصلی | توریست پنل</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link
+      rel="stylesheet"
+      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
+   
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- owl carousel slider -->
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.css">
+  </head>
+
+  <body dir="rtl">
+
+    <!--  ==============================  START THE NAVBAR ==============================  -->
+    <header id="header">
+      <div class="min-h-full bg-white">
+        <div class="shadow-md">
+          <nav x-data="{ open: false }" class="navbar">
+            <div class="px-2 mx-auto sm:px-4 lg:px-8">
+              <div class="navbar-container">
+                <div class="flex items-center gap-8 px-2 lg:px-0">
+                  <div class="flex-shrink-0">
+                    <a class="flex items-center" href="#">
+                      <span class="reltive top-[3px] text-white">Tailwind</span>
+                      <img
+                        class="block relative right-[5px] h-8 w-8"
+                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&amp;shade=300"
+                        alt="Your Company"
+                      />
+                    </a>
+                  </div>
+                  <div class="hidden lg:ml-10 lg:block">
+                    <div class="flex space-x-4">
+                      <a
+                        href="index.html"
+                        class="navbar-link"
+                        aria-current="page"
+                        x-state:on="Current"
+                        x-state:off="Default"
+                        >پیشخوان</a
+                      >
+  
+                      <a href="#" class="navbar-link">پشتیبانی</a>
+                      <a href="profile-info.html" class="navbar-link">پروفایل </a>
+                      <a href="wallet.html" class="navbar-link">کیف پول</a>
+  
+                      <a href="index.html" class="navbar-link_active">صفحه اصلی</a>
+  
+                      <a href="#" class="navbar-link">درباره ما</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="navbar-search-container">
+                  <div class="w-full max-w-lg lg:max-w-xs">
+                    <label for="search" class="sr-only">Search</label>
+                    <div class="relative text-gray-400 focus-within:text-gray-600">
+                      <div
+                        class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                      >
+                        <svg
+                          class="hidden w-5 h-5 text-gray-200 lg:block"
+                          x-description="Heroicon name: mini/magnifying-glass"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </div>
+                      <input
+                        id="search"
+                        class="navbar-search-container__search-input"
+                        placeholder="جست و جو"
+                        type="search"
+                        name="search"
+                        style="font-weight: 100 !important"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="flex lg:hidden">
+                  <!-- Mobile menu button -->
+                  <button
+                    type="button"
+                    class="sidebar-btn"
+                    id="sidebar-btn"
+                  >
+                    <span class="sr-only">Open main menu</span>
+                    <svg
+                      x-state:on="Menu open"
+                      x-state:off="Menu closed"
+                      class="block w-6 h-6"
+                      :class="{ 'hidden': open, 'block': !(open) }"
+                      x-description="Heroicon name: outline/bars-3"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                      ></path>
+                    </svg>
+                    <svg
+                      x-state:on="Menu open"
+                      x-state:off="Menu closed"
+                      class="hidden w-6 h-6"
+                      :class="{ 'block': open, 'hidden': !(open) }"
+                      x-description="Heroicon name: outline/x-mark"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 18L18 6M6 6l12 12"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+  
+                <div class="hidden lg:ms-4 lg:block">
+                  <div class="flex items-center">
+                    <!-- ===  message icon == -->
+                    <div class="cursor-pointer">
+                      <button type="button" class="navbar-message-icon_button badge">
+                        <span class="sr-only">View notifications</span>
+                        <ion-icon
+                          class="h-6 w-6 relative top-[3px]"
+                          name="chatbox-ellipses-outline"
+                        ></ion-icon>
+                      </button>
+                      <!-- === message icon drpdown links === -->
+                      <div class="hidden bg-white navbar-message_dropdown">
+                        <div class="flex-col">
+                          <a class="navbar-message-content-container" href="#">
+                            <div class="relative flex items-center gap-4 p-4 rounded-lg">
+                              <img
+                                class="w-10 h-10 rounded-full"
+                                src="../img/icons8-avatar-96.png"
+                                alt=""
+                              />
+                              <div class="navbar-message-content">
+                                <p class="navbar-message-content__username">نام کاربر</p>
+                                <p class="navbar-message-content__text">3 دقیقه پیش</p>
+                              </div>
+                              <span
+                                class="navbar-message-content__number"
+                                >2</span
+                              >
+                            </div>
+                          </a>
+                          <hr />
+                          <a class="navbar-message-content-container" href="#">
+                            <div class="relative flex items-center gap-4 p-4 rounded-lg">
+                              <img
+                                class="w-10 h-10 rounded-full"
+                                src="../img/icons8-avatar-96.png"
+                                alt=""
+                              />
+                              <div class="navbar-message-content">
+                                <p class="navbar-message-content__username">نام کاربر</p>
+                                <p class="navbar-message-content__text">3 دقیقه پیش</p>
+                              </div>
+                              <span
+                                class="navbar-message-content__number"
+                                >2</span
+                              >
+                            </div>
+                          </a>
+                          <hr />
+                          <a class="navbar-message-content-container" href="#">
+                            <div class="relative flex items-center gap-4 p-4 rounded-lg">
+                              <img
+                                class="w-10 h-10 rounded-full"
+                                src="../img/icons8-avatar-96.png"
+                                alt=""
+                              />
+                              <div class="navbar-message-content">
+                                <p class="navbar-message-content__username">نام کاربر</p>
+                                <p class="navbar-message-content__text">3 دقیقه پیش</p>
+                              </div>
+                              <span
+                                class="navbar-message-content__number"
+                                >2</span
+                              >
+                            </div>
+                          </a>
+                          <hr />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- ===== message icon ends here ==== -->
+  
+                    <!-- Profile dropdown -->
+  
+                    <div
+                      class="relative flex-shrink-0 ml-3"
+                      x-data="Components.menu({ open: false })"
+                      x-init="init()"
+                      @keydown.escape.stop="open = false; focusButton()"
+                      @click.away="onClickAway($event)"
+                    >
+                      <div class="duration-300 group hover:opacity-75">
+                        <button type="button" class="navbar-profile_button" id="user-menu-button">
+                          <span class="sr-only">Open user menu</span>
+                          <img
+                            class="w-8 h-8 hover:scale-[1.2] duration-300 rounded-full"
+                            src="../img/icons8-avatar-96.png"
+                            alt=""
+                          />
+                        </button>
+                      </div>
+  
+                      <div class="hidden navbar-profile-dropdown_links">
+                        <a
+                          href="login-form.html"
+                          class="navbar-profile-dropdown-item group"
+                          x-state:on="Active"
+                          x-state:off="Not Active"
+                          :class="{ 'bg-gray-100': activeIndex === 0 }"
+                          role="menuitem"
+                          tabindex="-1"
+                          id="user-menu-item-0"
+                          @mouseenter="onMouseEnter($event)"
+                          @mousemove="onMouseMove($event, 0)"
+                          @mouseleave="onMouseLeave($event)"
+                          @click="open = false; focusButton()"
+                        >
+                        <box-icon class="navbar-profile-dropdown-item__icon"  name='log-in' ></box-icon>
+                          ورود/ثبت نام
+                        </a>
+                        <a
+                          href="#"
+                          target="_blank"
+                          class="navbar-profile-dropdown-item group"
+                          :class="{ 'bg-gray-100': activeIndex === 1 }"
+                          role="menuitem"
+                          tabindex="-1"
+                          id="user-menu-item-1"
+                          @mouseenter="onMouseEnter($event)"
+                          @mousemove="onMouseMove($event, 1)"
+                          @mouseleave="onMouseLeave($event)"
+                          @click="open = false; focusButton()"
+                        >
+                        <box-icon class="navbar-profile-dropdown-item__icon" name='cog' ></box-icon>
+                          تنظیمات
+                        </a>
+                        <a
+                          href="#"
+                          target="_blank"
+                          class="navbar-profile-dropdown-item group"
+                          :class="{ 'bg-gray-100': activeIndex === 2 }"
+                          role="menuitem"
+                          tabindex="-1"
+                          id="user-menu-item-2"
+                          @mouseenter="onMouseEnter($event)"
+                          @mousemove="onMouseMove($event, 2)"
+                          @mouseleave="onMouseLeave($event)"
+                          @click="open = false; focusButton()"
+                        >
+                        <box-icon class="navbar-profile-dropdown-item__icon"  name='log-out'></box-icon>
+                          خروج
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+     </header>
+
+    <!-- ==================================== START THE SIDEBAR ============================== -->
+    <aside id="aside" class="hidden lg:block sidebar_fixed">
+      <div
+        class="sidebar-wrapper"
+      ></div>
+      <div class="sidebar-userinfo-container">
+        <div class="flex flex-col items-center justify-center p-4">
+          <img class="w-20 h-20 rounded-md" src="../img/icons8-avatar-96.png" alt="" />
+          <p class="mt-3 text-white">نام کاربری</p>
+          <a href="basket.html">
+            <ion-icon class="sidebar-message_icon" title="سبد خرید " name="cart"></ion-icon>
+          </a>
+          <a href="login-form.html" title="خروج از حساب کاربری" class="cursor-pointer sidebar-exit_button">
+            <ion-icon name="exit-outline"></ion-icon>
+            <span class="sr-only">Exit button</span>
+          </a>
+        </div>
+        <div class="flex flex-col gap-2 mt-4">
+          <a class="sidebar-accordion_button" href="dashboard.html">
+            <ion-icon class="sidebar-link" name="desktop-outline"></ion-icon>
+           داشبورد
+          </a>
+          <a class="sidebar-accordion_button" href="profile-change.html">
+            <ion-icon class="sidebar-link" name="person-outline"></ion-icon>
+            پروفایل
+          </a>
+          <!-- accordion one ==== -->
+          <div class="mt-2 group">
+            <button class="sidebar-accordion-menu-btn">
+              <ion-icon class="sidebar-link" name="shield-checkmark-outline"></ion-icon>
+              پشتیبانی
+              <box-icon class="sidebar-button__chevron-down" name='chevron-down'></box-icon>
+            </button>
+            <!-- ===  accordion box === -->
+            <div class="sidebar-accordion-box">
+              <a class="sidebar-accordion-button_link" href="supporting-tickets.html">
+                <box-icon class="sidebar-accordion-button_link__icon" name='message-square-dots' ></box-icon>
+                ارسال پیام
+              </a>
+              <a class="sidebar-accordion-button_link" href="my-tickets.html">
+                <box-icon class="sidebar-accordion-button_link__icon" name='comment-dots' ></box-icon>
+                پیام های من
+              </a>
+            </div>
+          </div>
+          
+          <!-- ==== accordion one ends here ==== -->
+
+          <a class="sidebar-accordion_button" href="supporting-tickets.html">
+            <ion-icon
+              class="relative top-[3px] sidebar-link"
+              name="ticket-outline"
+            ></ion-icon>
+            تیکت ها
+          </a>
+          <a class="sidebar-accordion_button" href="report.html">
+            <ion-icon class="sidebar-link" name="stats-chart-outline"></ion-icon>
+            گزارش فروش
+          </a>
+        </div>
+
+        <!-- accordion two  ==== -->
+        <div class="mt-2 group">
+          <button class="sidebar-accordion-menu-btn">
+            <ion-icon class="sidebar-link" name="shield-checkmark-outline"></ion-icon>
+            محصولات من
+            <box-icon class="sidebar-button__chevron-down" name='chevron-down'></box-icon>
+          </button>
+        </div>
+        <!-- ==== accordion tow ends here ==== -->
+        <a class="sidebar-accordion_button" href="saved.html">
+          <ion-icon class="sidebar-link" name="stats-chart-outline"></ion-icon>
+          علاقه مندی ها
+        </a>
+          <!-- accordion four  ==== -->
+        <div class="group">
+          <button class="sidebar-accordion-menu-btn">
+            <ion-icon class="sidebar-link" name="cash-outline"></ion-icon>
+            مدیریت مالی
+            <box-icon class="sidebar-button__chevron-down" name='chevron-down'></box-icon>
+          </button>
+          <!-- ===  accordion box === -->
+          <div class="sidebar-accordion-box">
+            <a class="sidebar-accordion-button_link" href="payment-page.html">
+              <box-icon class="sidebar-accordion-button_link__icon" name='wallet-alt' ></box-icon>
+              پرداخت ها
+            </a>
+            <a class="sidebar-accordion-button_link" href="wallet.html" target="_blank">
+              <box-icon class="sidebar-accordion-button_link__icon" name='credit-card-alt' ></box-icon>
+              کیف پول دیجیتال
+            </a>
+            <a class="sidebar-accordion-button_link" href="wallet-changes.html">
+              <box-icon class="sidebar-accordion-button_link__icon" name='money-withdraw'></box-icon>
+              تغییرات کیف پول
+            </a>
+            <a class="sidebar-accordion-button_link" href="payment-page.html">
+              <box-icon class="sidebar-accordion-button_link__icon" name='credit-card-front'></box-icon>
+              تسویه حساب
+            </a>
+            <a class="sidebar-accordion-button_link" href="cash-report.html">
+              <box-icon class="sidebar-accordion-button_link__icon" name='coin-stack'></box-icon>
+             گزارش درگاه
+            </a>
+          </div>
+        </div>
+        <hr />
+        </a>
+        <a class="sidebar-accordion_button" href="about-us.html">
+          <ion-icon
+            class="sidebar-accordion-button_link__icon"
+            name="create-outline"
+          ></ion-icon>
+          درباره ما
+        </a>
+      </div>
+    </aside>
+      
+    <main class=" main-content main-content--main-page">
+
+      <!-- =========================== tickets quick information box ==================================== -->
+      <section id="ticket-detail">
+              <div class="tickets-result-box-container">
+                <div class="grid grid-cols-3 md:grid-cols-6 gap-3">
+                    <div class="bg-mylight-blue tickets-result-box-container__item">
+                        <img class="w-4 hidden media-470px:block" src="../img/icons/ticket.png " alt="">
+                        سانس ها : 1
+                    </div>
+
+                    <div class="bg-mylight-blue tickets-result-box-container__item">
+                      <img class="w-4 hidden media-470px:block" src="../img/icons/plane-tickets.png" alt="">
+                      تعداد بلیط ها : 7
+                  </div>
+
+                  <div class="bg-mylight-blue tickets-result-box-container__item">
+                    <img class="w-4 hidden media-470px:block" src="../img/icons/banknotes.png" alt="">
+                    مجموع : 37،120،000
+                </div>
+
+                <button class="bg-green-500 tickets-result-box-container__item">
+                  <img class="w-4 hidden media-470px:block" src="../img/icons/cart.png" alt="">
+                خرید نهایی
+              </button>
+
+              <button class="bg-red-500 cancel-shopping tickets-result-box-container__item">
+                <img class="w-4 hidden media-470px:block" src="../img/icons/empty-cart.png" alt="">
+                کنسل کردن سبد خرید
+            </button>
+
+            <div class="bg-mylight-blue tickets-result-box-container__item">
+              <img class="w-4 hidden media-470px:block" src="../img/icons/clock.png" alt="">
+              <div class="flex items-center">
+                <span id="sec">40</span>
+                :
+                <span id="min">28</span>
+              </div>
+          </div>
+        </div>
+
+        <!-- ================== refresh and store bag buttons ================== -->  
+        <div class="tickets-result-box-container__buttons-container">
+                
+            <button title="سبد خرید" onclick="showBasket()" class="tickets-result-box-container__buttons-container__basket-button">
+              <img class="w-4" src="../img/icons/paper-bags (1).png" alt="">
+          </button>
+
+          <button class="tickets-result-box-container__buttons-container__refresh-button">
+            <img class="w-4" src="../img/icons/refresh.png" alt="">
+          </button>
+
+            </div>
+          </div>
+      </section>
+    
+      <!-- =========================== START THE FILTER SELECT BOXES ====================== -->
+      <section id="filter-select-box">
+        <div class="select-box-tickets-container">
+        
+          <div class=" relative w-full">
+            <label for="typeOfTicket" class="select-box-tickets__label">نوع بلیط :</label>
+            <select id="typeOfTicket" class="select-box-tickets__select-form">
+              <option selected>تفریحی</option>
+              <option value="1">زیارتی</option>
+              <option value="2">گردشگری</option>
+              <option value="3">تور</option>
+              <option value="4">مسافرتی</option>
+            </select>
+            <i class='bx bx-chevron-down select-box-chevron'></i>
+          </div>
+  
+          <div class="relative w-full">
+            <label for="date" class="select-box-tickets__label">دسته بندی :</label>
+            <select id="date" class="select-box-tickets__select-form">
+              <option selected>ارزان ترین </option>
+              <option value="1">گران ترین</option>
+              <option value="2">پرفروش ترین</option>
+              <option value="3">تازه ها</option>  
+              <option value="4">پیشنهاد ویژه</option>
+            </select>
+            <i class='bx bx-chevron-down select-box-chevron'></i>
+          </div>
+        </div>
+  
+      </section>
+      
+      <!--  ====================================== START THE TYPE OF TICKET ============================== -->
+      <section id="tickets-filter-section">
+        <div id="owl-carousel__links" class="owl-carousel owl-theme mt-10 ">
+          <div class="item py-5">
+             <div class=" category-box group">
+            <a href="#" class="category-box-container">
+              <i class='bx bx-restaurant category-box__icon'></i>
+              <span class="category-box__title">رستوران</span>
+              <div class="category-box__number">۱۳۰<span class="category-box__text">عدد</span></div>
+            </a>
+        </div>
+          </div>
+          <div class="item py-5">
+             <div class=" category-box group">
+            <a href="#" class="category-box-container">
+              <i class='bx bx-coffee category-box__icon'></i>
+              <span class="category-box__title">کافه</span>
+              <div class="category-box__number">۱۳۰<span class="category-box__text">عدد</span></div>
+            </a>
+        </div>
+          </div>
+          <div class="item py-5">
+             <div class=" category-box group">
+            <a href="#" class="category-box-container">
+              <i class='bx bx-game category-box__icon'></i>
+              <span class="category-box__title">شهربازی</span>
+              <div class="category-box__number">۱۳۰<span class="category-box__text">عدد</span></div>
+            </a>
+        </div>
+          </div>
+          <div class="item py-5">
+             <div class=" category-box group">
+            <a href="#" class="category-box-container">
+              <i class='bx bx-hotel category-box__icon'></i>
+              <span class="category-box__title">هتل</span>
+              <div class="category-box__number">۱۳۰<span class="category-box__text">عدد</span></div>
+            </a>
+        </div>
+          </div>  
+          <div class="item py-5">
+             <div class=" category-box group">
+            <a href="#" class="category-box-container">
+              <i class='bx bx-swim category-box__icon'></i>
+              <span class="category-box__title">تفریحی</span>
+              <div class="category-box__number">۱۳۰<span class="category-box__text">عدد</span></div>
+            </a>
+        </div>
+          </div>
+          <div class="item py-5">
+             <div class=" category-box group">
+            <a href="#" class="category-box-container">
+              <i class='bx bxs-castle category-box__icon'></i>
+              <span class="category-box__title">اماکن تاریخی و موزه </span>
+              <div class="category-box__number">۱۳۰<span class="category-box__text">عدد</span></div>
+            </a>
+        </div>
+          </div>
+          <div class="item py-5">
+             <div class=" category-box group">
+            <a href="#" class="category-box-container">
+              <i class='bx bxs-map-alt category-box__icon'></i>
+              <span class="category-box__title">کمپینگ</span>
+              <div class="category-box__number">۱۳۰<span class="category-box__text">عدد</span></div>
+            </a>
+        </div>
+          </div>
+          <div class="item py-5">
+             <div class=" category-box group">
+            <a href="#" class="category-box-container">
+              <i class='bx bxs-plane category-box__icon'></i>
+              <span class="category-box__title">تور های مسافرتی</span>
+              <div class="category-box__number">۱۳۰<span class="category-box__text">عدد</span></div>
+            </a>
+        </div>
+          </div>
+          <div class="item py-5">
+             <div class=" category-box group">
+            <a href="#" class="category-box-container">
+              <i class='bx bxs-tree category-box__icon'></i>
+              <span class="category-box__title">طبیعت گردی</span>
+              <div class="category-box__number">۱۳۰<span class="category-box__text">عدد</span></div>
+            </a>
+        </div>
+          </div>
+      </div>
+      </section>
+   
+      <!-- =============================== START THE CARDS  ============================== -->
+      <section id="card-section">
+        <div class="grid grid-col-1 md:grid-cols-3 gap-x-3 gap-y-5 mt-10">
+
+          <!- <!-- ======================= START THE TICKET CARD =================================-->
+            <div class="card-ticket">
+              <div class="group card-ticket__banner-container">
+                <a class="duration-200 group-hover:opacity-40" href="#">
+                  <img class="card-ticket__banner" src="../img/kid-green.jpg" alt="" />
+                </a>
+                <div
+                  class="card-ticket__banner__button-container"
+                >
+                  <a
+                    class="card-ticket__banner__button"
+                    href="#"
+                    >اطلاعات بیشتر
+                  </a>
+                </div>
+              </div>
+    
+              <div class="px-4 mt-10 flex justify-center">
+                <button
+                  class="btn-outline px-10 btn-outline--blue group"
+                >
+                  تهیه بلیط
+                </button>
+              </div>
+              <!-- ========= suggestion box ========= -->
+              <span class="card-ticket__suggestion-box">پیشنهاد ویژه</span>
+              
+              <!-- ========= CARD DESCRIPTION ========= -->
+              <div class="flex flex-col items-center gap-3">
+                 <h6 class="card-ticket__title">کلوپ تفریحاتی دریایی فلایتو</h6>
+                  <div class="flex items-center gap-3">
+                    <!-- ============== offer box ============ -->
+                    <span class="card-ticket__text-offer">60%</span>
+                    <span class="card-ticket__text-del">۳۲۰۰۰۰ تومان</span>
+                    <span class="card-ticket__text-price">۱۲۰۰۰۰ تومان</span>
+                  </div>
+              </div>
+              <div class="card-ticket__buttons-container">
+                <a class="text-xl" title="افزودن به سبد خرید " href="#" onclick="pushBuyBtn(event)">
+                  <i class='bx bx-cart-add card-ticket__icon'></i>
+                </a>
+                <button
+                  title="در مورد محصول"
+                  class="text-xl"
+                  onclick="event.preventDefault();showMoreInfoModal()"
+                >
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="information-outline"
+                  ></ion-icon>
+                </button>
+                <button title="نشانه گذاری" class="text-xl tag-btn">
+                  <ion-icon
+                    class="card-ticket__icon tag-icon"
+                    name="bookmark-outline"
+                  ></ion-icon>
+                </button>
+                <button title="علاقه مندی" class="text-xl favs-list-btn">
+                  <ion-icon
+                    class="card-ticket__icon favs-icon"
+                    name="heart"
+                  ></ion-icon>
+                </button>
+    
+                <button title="کپی لینک بلیط" class="text-xl">
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="link-outline"
+                  ></ion-icon>
+                </button>
+              </div>
+            </div>
+    
+           <!-- ======================= START THE TICKET CARD =================================-->
+             <div class="card-ticket">
+              <div class="group card-ticket__banner-container">
+                <a class="duration-200 group-hover:opacity-40" href="#">
+                  <img class="card-ticket__banner" src="../img/kid-green.jpg" alt="" />
+                </a>
+                <div
+                  class="card-ticket__banner__button-container"
+                >
+                  <a
+                    class="card-ticket__banner__button"
+                    href="#"
+                    >اطلاعات بیشتر
+                  </a>
+                </div>
+              </div>
+    
+              <div class="px-4 mt-10 flex justify-center">
+                <button
+                  class="btn-outline px-10 btn-outline--blue group"
+                >
+                تهیه بلیط
+                </button>
+              </div>
+              <!-- ================== CARD DESCRIPTION ================== -->
+              <div class="flex flex-col items-center gap-3">
+                 <h6 class="card-ticket__title">کلوپ تفریحاتی دریایی فلایتو</h6>
+                 <span class="card-ticket__text-price">۳۲۰۰۰۰ تومان</span>
+              </div>
+              <div class="card-ticket__buttons-container">
+                <a class="text-xl" title="افزودن به سبد خرید " href="#" onclick="pushBuyBtn(event)">
+                  <i class='bx bx-cart-add card-ticket__icon'></i>
+                </a>
+                <button
+                  title="در مورد محصول"
+                  class="text-xl"
+                  onclick="event.preventDefault();showMoreInfoModal()"
+                >
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="information-outline"
+                  ></ion-icon>
+                </button>
+                <button title="نشانه گذاری" class="text-xl tag-btn">
+                  <ion-icon
+                    class="card-ticket__icon tag-icon"
+                    name="bookmark-outline"
+                  ></ion-icon>
+                </button>
+                <button title="علاقه مندی" class="text-xl favs-list-btn">
+                  <ion-icon
+                    class= "card-ticket__icon favs-icon"
+                    name="heart"
+                  ></ion-icon>
+                </button>
+    
+                <button title="کپی لینک بلیط" class="text-xl">
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="link-outline"
+                  ></ion-icon>
+                </button>
+              </div>
+            </div>
+    
+           <!-- ======================= START THE TICKET CARD =================================-->
+             <div class="card-ticket">
+              <div class="group card-ticket__banner-container">
+                <a class="duration-200 group-hover:opacity-40" href="#">
+                  <img class="card-ticket__banner" src="../img/kid-green.jpg" alt="" />
+                </a>
+                <div
+                  class="card-ticket__banner__button-container"
+                >
+                  <a
+                    class="card-ticket__banner__button"
+                    href="#"
+                    >اطلاعات بیشتر
+                  </a>
+                </div>
+              </div>
+    
+              <div class="px-4 mt-10 flex justify-center">
+                <button
+                  class="btn-outline px-10 btn-outline--blue group"
+                >
+                تهیه بلیط
+                </button>
+              </div>
+              <!-- ========= CARD DESCRIPTION ========= -->
+              <div class="flex flex-col items-center gap-3">
+                 <h6 class="card-ticket__title">کلوپ تفریحاتی دریایی فلایتو</h6>
+                 <span class="card-ticket__text-price">۳۲۰۰۰۰ تومان</span>
+              </div>
+              <div class="card-ticket__buttons-container">
+                <a class="text-xl" title="افزودن به سبد خرید " href="#" onclick="pushBuyBtn(event)">
+                  <i class='bx bx-cart-add card-ticket__icon'></i>
+                </a>
+                <button
+                  title="در مورد محصول"
+                  class="text-xl"
+                  onclick="event.preventDefault();showMoreInfoModal()"
+                >
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="information-outline"
+                  ></ion-icon>
+                </button>
+                <button title="نشانه گذاری" class="text-xl tag-btn">
+                  <ion-icon
+                    class="card-ticket__icon tag-icon"
+                    name="bookmark-outline"
+                  ></ion-icon>
+                </button>
+                <button title="علاقه مندی" class="text-xl favs-list-btn">
+                  <ion-icon
+                    class= "card-ticket__icon favs-icon"
+                    name="heart"
+                  ></ion-icon>
+                </button>
+    
+                <button title="کپی لینک بلیط" class="text-xl">
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="link-outline"
+                  ></ion-icon>
+                </button>
+              </div>
+            </div>
+    
+          </div>
+    
+      </section>
+
+      <!-- ============================== START THE DIVIDER =========================== -->
+      <div class="flex items-center gap-4 my-10 px-4">
+         <span class="border-2 border-blue-500 w-full rounded-lg"></span>
+         <span class="text-gray-700 font-bold text-lg shrink-0">پیشنهاد های ویژه</span>
+         <span class="border-2 border-blue-500 w-full rounded-lg"></span>
+      </div>
+
+      <!-- ==================================== START THE SLIDER ================================= -->
+      <section id="card-slider" class="card-slider-section">
+        <div id="owl-slider" class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="card-ticket">
+              <div class="group card-ticket__banner-container">
+                <a class="duration-200 group-hover:opacity-40" href="#">
+                  <img class="card-ticket__banner" src="../img/kid-green.jpg" alt="" />
+                </a>
+                <div
+                  class="card-ticket__banner__button-container"
+                >
+                  <a
+                    class="card-ticket__banner__button"
+                    href="#"
+                    >اطلاعات بیشتر
+                  </a>
+                </div>
+              </div>
+    
+              <div class="px-4 mt-10 flex justify-center">
+                <button
+                  class="btn-outline px-10 btn-outline--blue group"
+                >
+                  تهیه بلیط
+                </button>
+              </div>
+              <!-- ========= suggestion box ========= -->
+              <span class="card-ticket__suggestion-box">پیشنهاد ویژه</span>
+              
+              <!-- ========= CARD DESCRIPTION ========= -->
+              <div class="flex flex-col items-center gap-3">
+                 <h6 class="card-ticket__title">کلوپ تفریحاتی دریایی فلایتو</h6>
+                  <div class="flex items-center gap-3">
+                    <!-- ============== offer box ============ -->
+                    <span class="card-ticket__text-offer">60%</span>
+                    <span class="card-ticket__text-del">۳۲۰۰۰۰ تومان</span>
+                    <span class="card-ticket__text-price">۱۲۰۰۰۰ تومان</span>
+                  </div>
+              </div>
+              <div class="card-ticket__buttons-container">
+                <a class="text-xl" title="افزودن به سبد خرید " href="#" onclick="pushBuyBtn(event)">
+                  <i class='bx bx-cart-add card-ticket__icon'></i>
+                </a>
+                <button
+                  title="در مورد محصول"
+                  class="text-xl"
+                  onclick="event.preventDefault();showMoreInfoModal()"
+                >
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="information-outline"
+                  ></ion-icon>
+                </button>
+                <button title="نشانه گذاری" class="text-xl tag-btn">
+                  <ion-icon
+                    class="card-ticket__icon tag-icon"
+                    name="bookmark-outline"
+                  ></ion-icon>
+                </button>
+                <button title="علاقه مندی" class="text-xl favs-list-btn">
+                  <ion-icon
+                    class="card-ticket__icon favs-icon"
+                    name="heart"
+                  ></ion-icon>
+                </button>
+    
+                <button title="کپی لینک بلیط" class="text-xl">
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="link-outline"
+                  ></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-ticket">
+              <div class="group card-ticket__banner-container">
+                <a class="duration-200 group-hover:opacity-40" href="#">
+                  <img class="card-ticket__banner" src="../img/kid-green.jpg" alt="" />
+                </a>
+                <div
+                  class="card-ticket__banner__button-container"
+                >
+                  <a
+                    class="card-ticket__banner__button"
+                    href="#"
+                    >اطلاعات بیشتر
+                  </a>
+                </div>
+              </div>
+    
+              <div class="px-4 mt-10 flex justify-center">
+                <button
+                  class="btn-outline px-10 btn-outline--blue group"
+                >
+                  تهیه بلیط
+                </button>
+              </div>
+              <!-- ========= suggestion box ========= -->
+              <span class="card-ticket__suggestion-box">پیشنهاد ویژه</span>
+              
+              <!-- ========= CARD DESCRIPTION ========= -->
+              <div class="flex flex-col items-center gap-3">
+                 <h6 class="card-ticket__title">کلوپ تفریحاتی دریایی فلایتو</h6>
+                  <div class="flex items-center gap-3">
+                    <!-- ============== offer box ============ -->
+                    <span class="card-ticket__text-offer">60%</span>
+                    <span class="card-ticket__text-del">۳۲۰۰۰۰ تومان</span>
+                    <span class="card-ticket__text-price">۱۲۰۰۰۰ تومان</span>
+                  </div>
+              </div>
+              <div class="card-ticket__buttons-container">
+                <a class="text-xl" title="افزودن به سبد خرید " href="#" onclick="pushBuyBtn(event)">
+                  <i class='bx bx-cart-add card-ticket__icon'></i>
+                </a>
+                <button
+                  title="در مورد محصول"
+                  class="text-xl"
+                  onclick="event.preventDefault();showMoreInfoModal()"
+                >
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="information-outline"
+                  ></ion-icon>
+                </button>
+                <button title="نشانه گذاری" class="text-xl tag-btn">
+                  <ion-icon
+                    class="card-ticket__icon tag-icon"
+                    name="bookmark-outline"
+                  ></ion-icon>
+                </button>
+                <button title="علاقه مندی" class="text-xl favs-list-btn">
+                  <ion-icon
+                    class="card-ticket__icon favs-icon"
+                    name="heart"
+                  ></ion-icon>
+                </button>
+    
+                <button title="کپی لینک بلیط" class="text-xl">
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="link-outline"
+                  ></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-ticket">
+              <div class="group card-ticket__banner-container">
+                <a class="duration-200 group-hover:opacity-40" href="#">
+                  <img class="card-ticket__banner" src="../img/kid-green.jpg" alt="" />
+                </a>
+                <div
+                  class="card-ticket__banner__button-container"
+                >
+                  <a
+                    class="card-ticket__banner__button"
+                    href="#"
+                    >اطلاعات بیشتر
+                  </a>
+                </div>
+              </div>
+    
+              <div class="px-4 mt-10 flex justify-center">
+                <button
+                  class="btn-outline px-10 btn-outline--blue group"
+                >
+                  تهیه بلیط
+                </button>
+              </div>
+              <!-- ========= suggestion box ========= -->
+              <span class="card-ticket__suggestion-box">پیشنهاد ویژه</span>
+              
+              <!-- ========= CARD DESCRIPTION ========= -->
+              <div class="flex flex-col items-center gap-3">
+                 <h6 class="card-ticket__title">کلوپ تفریحاتی دریایی فلایتو</h6>
+                  <div class="flex items-center gap-3">
+                    <!-- ============== offer box ============ -->
+                    <span class="card-ticket__text-offer">60%</span>
+                    <span class="card-ticket__text-del">۳۲۰۰۰۰ تومان</span>
+                    <span class="card-ticket__text-price">۱۲۰۰۰۰ تومان</span>
+                  </div>
+              </div>
+              <div class="card-ticket__buttons-container">
+                <a class="text-xl" title="افزودن به سبد خرید " href="#" onclick="pushBuyBtn(event)">
+                  <i class='bx bx-cart-add card-ticket__icon'></i>
+                </a>
+                <button
+                  title="در مورد محصول"
+                  class="text-xl"
+                  onclick="event.preventDefault();showMoreInfoModal()"
+                >
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="information-outline"
+                  ></ion-icon>
+                </button>
+                <button title="نشانه گذاری" class="text-xl tag-btn">
+                  <ion-icon
+                    class="card-ticket__icon tag-icon"
+                    name="bookmark-outline"
+                  ></ion-icon>
+                </button>
+                <button title="علاقه مندی" class="text-xl favs-list-btn">
+                  <ion-icon
+                    class="card-ticket__icon favs-icon"
+                    name="heart"
+                  ></ion-icon>
+                </button>
+    
+                <button title="کپی لینک بلیط" class="text-xl">
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="link-outline"
+                  ></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-ticket">
+              <div class="group card-ticket__banner-container">
+                <a class="duration-200 group-hover:opacity-40" href="#">
+                  <img class="card-ticket__banner" src="../img/kid-green.jpg" alt="" />
+                </a>
+                <div
+                  class="card-ticket__banner__button-container"
+                >
+                  <a
+                    class="card-ticket__banner__button"
+                    href="#"
+                    >اطلاعات بیشتر
+                  </a>
+                </div>
+              </div>
+    
+              <div class="px-4 mt-10 flex justify-center">
+                <button
+                  class="btn-outline px-10 btn-outline--blue group"
+                >
+                  تهیه بلیط
+                </button>
+              </div>
+              <!-- ========= suggestion box ========= -->
+              <span class="card-ticket__suggestion-box">پیشنهاد ویژه</span>
+              
+              <!-- ========= CARD DESCRIPTION ========= -->
+              <div class="flex flex-col items-center gap-3">
+                 <h6 class="card-ticket__title">کلوپ تفریحاتی دریایی فلایتو</h6>
+                  <div class="flex items-center gap-3">
+                    <!-- ============== offer box ============ -->
+                    <span class="card-ticket__text-offer">60%</span>
+                    <span class="card-ticket__text-del">۳۲۰۰۰۰ تومان</span>
+                    <span class="card-ticket__text-price">۱۲۰۰۰۰ تومان</span>
+                  </div>
+              </div>
+              <div class="card-ticket__buttons-container">
+                <a class="text-xl" title="افزودن به سبد خرید " href="#" onclick="pushBuyBtn(event)">
+                  <i class='bx bx-cart-add card-ticket__icon'></i>
+                </a>
+                <button
+                  title="در مورد محصول"
+                  class="text-xl"
+                  onclick="event.preventDefault();showMoreInfoModal()"
+                >
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="information-outline"
+                  ></ion-icon>
+                </button>
+                <button title="نشانه گذاری" class="text-xl tag-btn">
+                  <ion-icon
+                    class="card-ticket__icon tag-icon"
+                    name="bookmark-outline"
+                  ></ion-icon>
+                </button>
+                <button title="علاقه مندی" class="text-xl favs-list-btn">
+                  <ion-icon
+                    class="card-ticket__icon favs-icon"
+                    name="heart"
+                  ></ion-icon>
+                </button>
+    
+                <button title="کپی لینک بلیط" class="text-xl">
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="link-outline"
+                  ></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-ticket">
+              <div class="group card-ticket__banner-container">
+                <a class="duration-200 group-hover:opacity-40" href="#">
+                  <img class="card-ticket__banner" src="../img/kid-green.jpg" alt="" />
+                </a>
+                <div
+                  class="card-ticket__banner__button-container"
+                >
+                  <a
+                    class="card-ticket__banner__button"
+                    href="#"
+                    >اطلاعات بیشتر
+                  </a>
+                </div>
+              </div>
+    
+              <div class="px-4 mt-10 flex justify-center">
+                <button
+                  class="btn-outline px-10 btn-outline--blue group"
+                >
+                  تهیه بلیط
+                </button>
+              </div>
+              <!-- ========= suggestion box ========= -->
+              <span class="card-ticket__suggestion-box">پیشنهاد ویژه</span>
+              
+              <!-- ========= CARD DESCRIPTION ========= -->
+              <div class="flex flex-col items-center gap-3">
+                 <h6 class="card-ticket__title">کلوپ تفریحاتی دریایی فلایتو</h6>
+                  <div class="flex items-center gap-3">
+                    <!-- ============== offer box ============ -->
+                    <span class="card-ticket__text-offer">60%</span>
+                    <span class="card-ticket__text-del">۳۲۰۰۰۰ تومان</span>
+                    <span class="card-ticket__text-price">۱۲۰۰۰۰ تومان</span>
+                  </div>
+              </div>
+              <div class="card-ticket__buttons-container">
+                <a class="text-xl" title="افزودن به سبد خرید " href="#" onclick="pushBuyBtn(event)">
+                  <i class='bx bx-cart-add card-ticket__icon'></i>
+                </a>
+                <button
+                  title="در مورد محصول"
+                  class="text-xl"
+                  onclick="event.preventDefault();showMoreInfoModal()"
+                >
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="information-outline"
+                  ></ion-icon>
+                </button>
+                <button title="نشانه گذاری" class="text-xl tag-btn">
+                  <ion-icon
+                    class="card-ticket__icon tag-icon"
+                    name="bookmark-outline"
+                  ></ion-icon>
+                </button>
+                <button title="علاقه مندی" class="text-xl favs-list-btn">
+                  <ion-icon
+                    class="card-ticket__icon favs-icon"
+                    name="heart"
+                  ></ion-icon>
+                </button>
+    
+                <button title="کپی لینک بلیط" class="text-xl">
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="link-outline"
+                  ></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-ticket">
+              <div class="group card-ticket__banner-container">
+                <a class="duration-200 group-hover:opacity-40" href="#">
+                  <img class="card-ticket__banner" src="../img/kid-green.jpg" alt="" />
+                </a>
+                <div
+                  class="card-ticket__banner__button-container"
+                >
+                  <a
+                    class="card-ticket__banner__button"
+                    href="#"
+                    >اطلاعات بیشتر
+                  </a>
+                </div>
+              </div>
+    
+              <div class="px-4 mt-10 flex justify-center">
+                <button
+                  class="btn-outline px-10 btn-outline--blue group"
+                >
+                  تهیه بلیط
+                </button>
+              </div>
+              <!-- ========= suggestion box ========= -->
+              <span class="card-ticket__suggestion-box">پیشنهاد ویژه</span>
+              
+              <!-- ========= CARD DESCRIPTION ========= -->
+              <div class="flex flex-col items-center gap-3">
+                 <h6 class="card-ticket__title">کلوپ تفریحاتی دریایی فلایتو</h6>
+                  <div class="flex items-center gap-3">
+                    <!-- ============== offer box ============ -->
+                    <span class="card-ticket__text-offer">60%</span>
+                    <span class="card-ticket__text-del">۳۲۰۰۰۰ تومان</span>
+                    <span class="card-ticket__text-price">۱۲۰۰۰۰ تومان</span>
+                  </div>
+              </div>
+              <div class="card-ticket__buttons-container">
+                <a class="text-xl" title="افزودن به سبد خرید " href="#" onclick="pushBuyBtn(event)">
+                  <i class='bx bx-cart-add card-ticket__icon'></i>
+                </a>
+                <button
+                  title="در مورد محصول"
+                  class="text-xl"
+                  onclick="event.preventDefault();showMoreInfoModal()"
+                >
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="information-outline"
+                  ></ion-icon>
+                </button>
+                <button title="نشانه گذاری" class="text-xl tag-btn">
+                  <ion-icon
+                    class="card-ticket__icon tag-icon"
+                    name="bookmark-outline"
+                  ></ion-icon>
+                </button>
+                <button title="علاقه مندی" class="text-xl favs-list-btn">
+                  <ion-icon
+                    class="card-ticket__icon favs-icon"
+                    name="heart"
+                  ></ion-icon>
+                </button>
+    
+                <button title="کپی لینک بلیط" class="text-xl">
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="link-outline"
+                  ></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-ticket">
+              <div class="group card-ticket__banner-container">
+                <a class="duration-200 group-hover:opacity-40" href="#">
+                  <img class="card-ticket__banner" src="../img/kid-green.jpg" alt="" />
+                </a>
+                <div
+                  class="card-ticket__banner__button-container"
+                >
+                  <a
+                    class="card-ticket__banner__button"
+                    href="#"
+                    >اطلاعات بیشتر
+                  </a>
+                </div>
+              </div>
+    
+              <div class="px-4 mt-10 flex justify-center">
+                <button
+                  class="btn-outline px-10 btn-outline--blue group"
+                >
+                  تهیه بلیط
+                </button>
+              </div>
+              <!-- ========= suggestion box ========= -->
+              <span class="card-ticket__suggestion-box">پیشنهاد ویژه</span>
+              
+              <!-- ========= CARD DESCRIPTION ========= -->
+              <div class="flex flex-col items-center gap-3">
+                 <h6 class="card-ticket__title">کلوپ تفریحاتی دریایی فلایتو</h6>
+                  <div class="flex items-center gap-3">
+                    <!-- ============== offer box ============ -->
+                    <span class="card-ticket__text-offer">60%</span>
+                    <span class="card-ticket__text-del">۳۲۰۰۰۰ تومان</span>
+                    <span class="card-ticket__text-price">۱۲۰۰۰۰ تومان</span>
+                  </div>
+              </div>
+              <div class="card-ticket__buttons-container">
+  
+                <a class="text-xl" title="افزودن به سبد خرید " href="#" onclick="pushBuyBtn(event)">
+                  <i class='bx bx-cart-add card-ticket__icon'></i>
+                </a>
+                <button
+                  title="در مورد محصول"
+                  class="text-xl"
+                  onclick="event.preventDefault();showMoreInfoModal()"
+                >
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="information-outline"
+                  ></ion-icon>
+                </button>
+                <button title="نشانه گذاری" class="text-xl tag-btn">
+                  <ion-icon
+                    class="card-ticket__icon tag-icon"
+                    name="bookmark-outline"
+                  ></ion-icon>
+                </button>
+                <button title="علاقه مندی" class="text-xl favs-list-btn">
+                  <ion-icon
+                    class="card-ticket__icon favs-icon"
+                    name="heart"
+                  ></ion-icon>
+                </button>
+    
+                <button title="کپی لینک بلیط" class="text-xl">
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="link-outline"
+                  ></ion-icon>
+                </button>
+              </div>
+  
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-ticket">
+              <div class="group card-ticket__banner-container">
+                <a class="duration-200 group-hover:opacity-40" href="#">
+                  <img class="card-ticket__banner" src="../img/kid-green.jpg" alt="" />
+                </a>
+                <div
+                  class="card-ticket__banner__button-container"
+                >
+                  <a
+                    class="card-ticket__banner__button"
+                    href="#"
+                    >اطلاعات بیشتر
+                  </a>
+                </div>
+              </div>
+    
+              <div class="px-4 mt-10 flex justify-center">
+                <button
+                  class="btn-outline px-10 btn-outline--blue group"
+                >
+                  تهیه بلیط
+                </button>
+              </div>
+              <!-- ========= suggestion box ========= -->
+              <span class="card-ticket__suggestion-box">پیشنهاد ویژه</span>
+              
+              <!-- ========= CARD DESCRIPTION ========= -->
+              <div class="flex flex-col items-center gap-3">
+                 <h6 class="card-ticket__title">کلوپ تفریحاتی دریایی فلایتو</h6>
+                  <div class="flex items-center gap-3">
+                    <!-- ============== offer box ============ -->
+                    <span class="card-ticket__text-offer">60%</span>
+                    <span class="card-ticket__text-del">۳۲۰۰۰۰ تومان</span>
+                    <span class="card-ticket__text-price">۱۲۰۰۰۰ تومان</span>
+                  </div>
+              </div>
+              <div class="card-ticket__buttons-container">
+                <a class="text-xl" title="افزودن به سبد خرید " href="#" onclick="pushBuyBtn(event)">
+                  <i class='bx bx-cart-add card-ticket__icon'></i>
+                </a>
+                <button
+                  title="در مورد محصول"
+                  class="text-xl"
+                  onclick="event.preventDefault();showMoreInfoModal()"
+                >
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="information-outline"
+                  ></ion-icon>
+                </button>
+                <button title="نشانه گذاری" class="text-xl tag-btn">
+                  <ion-icon
+                    class="card-ticket__icon tag-icon"
+                    name="bookmark-outline"
+                  ></ion-icon>
+                </button>
+                <button title="علاقه مندی" class="text-xl favs-list-btn">
+                  <ion-icon
+                    class="card-ticket__icon favs-icon"
+                    name="heart"
+                  ></ion-icon>
+                </button>
+    
+                <button title="کپی لینک بلیط" class="text-xl">
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="link-outline"
+                  ></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-ticket">
+              <div class="group card-ticket__banner-container">
+                <a class="duration-200 group-hover:opacity-40" href="#">
+                  <img class="card-ticket__banner" src="../img/kid-green.jpg" alt="" />
+                </a>
+                <div
+                  class="card-ticket__banner__button-container"
+                >
+                  <a
+                    class="card-ticket__banner__button"
+                    href="#"
+                    >اطلاعات بیشتر
+                  </a>
+                </div>
+              </div>
+    
+              <div class="px-4 mt-10 flex justify-center">
+                <button
+                  class="btn-outline px-10 btn-outline--blue group"
+                >
+                  تهیه بلیط
+                </button>
+              </div>
+              <!-- ========= suggestion box ========= -->
+              <span class="card-ticket__suggestion-box">پیشنهاد ویژه</span>
+              
+              <!-- ========= CARD DESCRIPTION ========= -->
+              <div class="flex flex-col items-center gap-3">
+                 <h6 class="card-ticket__title">کلوپ تفریحاتی دریایی فلایتو</h6>
+                  <div class="flex items-center gap-3">
+                    <!-- ============== offer box ============ -->
+                    <span class="card-ticket__text-offer">60%</span>
+                    <span class="card-ticket__text-del">۳۲۰۰۰۰ تومان</span>
+                    <span class="card-ticket__text-price">۱۲۰۰۰۰ تومان</span>
+                  </div>
+              </div>
+              <div class="card-ticket__buttons-container">
+                <a class="text-xl" title="افزودن به سبد خرید " href="#" onclick="pushBuyBtn(event)">
+                  <i class='bx bx-cart-add card-ticket__icon'></i>
+                </a>
+                <button
+                  title="در مورد محصول"
+                  class="text-xl"
+                  onclick="event.preventDefault();showMoreInfoModal()"
+                >
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="information-outline"
+                  ></ion-icon>
+                </button>
+                <button title="نشانه گذاری" class="text-xl tag-btn">
+                  <ion-icon
+                    class="card-ticket__icon tag-icon"
+                    name="bookmark-outline"
+                  ></ion-icon>
+                </button>
+                <button title="علاقه مندی" class="text-xl favs-list-btn">
+                  <ion-icon
+                    class="card-ticket__icon favs-icon"
+                    name="heart"
+                  ></ion-icon>
+                </button>
+    
+                <button title="کپی لینک بلیط" class="text-xl">
+                  <ion-icon
+                    class="card-ticket__icon"
+                    name="link-outline"
+                  ></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+      </div>
+      </section>
+
+      
+      <!-- ========================== START THE NEWSET =========================== -->
+
+       <!-- ===== title ====== -->
+    <div class="divider-container">
+        <div class="divider-container__content">
+          <h4 class="divider-container__title">
+            <i class='bx bxs-customize divider-container__icon text-[#7209b7]'></i>
+          </h4>
+          <span class="divider-container__text">جدید ترین </span>
+        </div>
+    </div>
+
+    <!-- ================ START THE latest CARDS =================== -->
+
+    <section class="latest-section">
+      <div class="grid gap-y-10 gap-x-6 lg:grid-cols-3 xl:gap-x-12">
+
+        <div class="new-card-ticket-container">
+          <div
+            class="new-card-ticket">
+            <div class="flex">
+              <div
+                class="new-card-ticket__banner group"
+                data-te-ripple-init data-te-ripple-color="light">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/024.webp" class="w-full" />
+                <!-- ======= buttons container ====== -->
+                <div class="flex flex-col gap-1 absolute top-[30px] right-[-50px] group-hover:right-[20px] duration-200 z-10">
+
+                  <buttton class="text-md mb-2" title="افزودن به سبد خرید " href="#" onclick="pushBuyBtn(event)">
+                    <i class='bx bx-cart-add card-ticket__icon'></i>
+                  </buttton>
+                  <button
+                    title="در مورد محصول"
+                    class="text-md"
+                    onclick="event.preventDefault();showMoreInfoModal()"
+                  >
+                    <ion-icon
+                      class="card-ticket__icon"
+                      name="information-outline"
+                    ></ion-icon>
+                  </button>
+                  <button title="نشانه گذاری" class="text-md tag-btn">
+                    <ion-icon
+                      class="card-ticket__icon tag-icon"
+                      name="bookmark-outline"
+                    ></ion-icon>
+                  </button>
+                  <button title="علاقه مندی" class="text-md favs-list-btn">
+                    <ion-icon
+                      class="card-ticket__icon favs-icon"
+                      name="heart"
+                    ></ion-icon>
+                  </button>
+                </div>
+                <a href="#!">
+                  <div
+                    class="new-card-ticket__banner__backdrop">
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h5 class="new-card-ticket__title">هتل کیش</h5>
+              <p class="new-card-ticket__status">
+                ظرفیت ۲۳ اتاق
+              </p>
+              <p class="new-card-ticket__description">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و 
+              </p>
+              <a href="#!" data-te-ripple-init data-te-ripple-color="light"
+                class="new-card-ticket__link">اطلاعات بیشتر</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="new-ticket-card-container">
+          <div
+            class="new-card-ticket">
+            <div class="flex">
+              <div
+                class="new-card-ticket__banner group"
+                data-te-ripple-init data-te-ripple-color="light">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/031.webp" class="w-full" />
+                <!-- ======= buttons container ====== -->
+                <div class="flex flex-col gap-1 absolute top-[30px] right-[-50px] group-hover:right-[20px] duration-200 z-10">
+
+                  <buttton class="text-md mb-2" title="افزودن به سبد خرید " href="#" onclick="pushBuyBtn(event)">
+                    <i class='bx bx-cart-add card-ticket__icon'></i>
+                  </buttton>
+                  <button
+                    title="در مورد محصول"
+                    class="text-md"
+                    onclick="event.preventDefault();showMoreInfoModal()"
+                  >
+                    <ion-icon
+                      class="card-ticket__icon"
+                      name="information-outline"
+                    ></ion-icon>
+                  </button>
+                  <button title="نشانه گذاری" class="text-md tag-btn">
+                    <ion-icon
+                      class="card-ticket__icon tag-icon"
+                      name="bookmark-outline"
+                    ></ion-icon>
+                  </button>
+                  <button title="علاقه مندی" class="text-md favs-list-btn">
+                    <ion-icon
+                      class="card-ticket__icon favs-icon"
+                      name="heart"
+                    ></ion-icon>
+                  </button>
+                </div>
+                <a href="#!">
+                  <div
+                    class="new-card-ticket__banner__backdrop">
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h5 class="new-card-ticket__title">تور کیش</h5>
+              <p class="new-card-ticket__status">
+              ظرفیت محدود (۳ نفر)
+              </p>
+            <p class="new-card-ticket__description">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و 
+              </p>
+              <a href="#!" data-te-ripple-init data-te-ripple-color="light"
+                class="new-card-ticket__link">اطلاعات بیشتر</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="new-ticket-card-container">
+          <div
+            class="new-card-ticket">
+            <div class="flex">
+              <div
+                class="new-card-ticket__banner group"
+                data-te-ripple-init data-te-ripple-color="light">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/081.webp" class="w-full" />
+                <!-- ======= buttons container ====== -->
+                <div class="flex flex-col gap-1 absolute top-[30px] right-[-50px] group-hover:right-[20px] duration-200 z-10">
+
+                  <buttton class="text-md mb-2" title="افزودن به سبد خرید " href="#" onclick="pushBuyBtn(event)">
+                    <i class='bx bx-cart-add card-ticket__icon'></i>
+                  </buttton>
+                  <button
+                    title="در مورد محصول"
+                    class="text-md"
+                    onclick="event.preventDefault();showMoreInfoModal()"
+                  >
+                    <ion-icon
+                      class="card-ticket__icon"
+                      name="information-outline"
+                    ></ion-icon>
+                  </button>
+                  <button title="نشانه گذاری" class="text-md tag-btn">
+                    <ion-icon
+                      class="card-ticket__icon tag-icon"
+                      name="bookmark-outline"
+                    ></ion-icon>
+                  </button>
+                  <button title="علاقه مندی" class="text-md favs-list-btn">
+                    <ion-icon
+                      class="card-ticket__icon favs-icon"
+                      name="heart"
+                    ></ion-icon>
+                  </button>
+                </div>
+                <a href="#!">
+                  <div
+                    class="new-card-ticket__banner__backdrop">
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h5 class="new-card-ticket__title">تور قشم </h5>
+              <p class="new-card-ticket__status">
+                ظرفیت محدود (۴ نفر)
+              </p>
+            <p class="new-card-ticket__description">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و 
+              </p>
+              <a href="#!" data-te-ripple-init data-te-ripple-color="light"
+                class="new-card-ticket__link">اطلاعات بیشتر</a>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="new-ticket-card-container">
+          <div
+            class="new-card-ticket">
+            <div class="flex">
+              <div
+                class="new-card-ticket__banner group"
+                data-te-ripple-init data-te-ripple-color="light">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/081.webp" class="w-full" />
+                <!-- ======= buttons container ====== -->
+                <div class="flex flex-col gap-1 absolute top-[30px] right-[-50px] group-hover:right-[20px] duration-200 z-10">
+
+                  <buttton class="text-md mb-2" title="افزودن به سبد خرید " href="#" onclick="pushBuyBtn(event)">
+                    <i class='bx bx-cart-add card-ticket__icon'></i>
+                  </buttton>
+                  <button
+                    title="در مورد محصول"
+                    class="text-md"
+                    onclick="event.preventDefault();showMoreInfoModal()"
+                  >
+                    <ion-icon
+                      class="card-ticket__icon"
+                      name="information-outline"
+                    ></ion-icon>
+                  </button>
+                  <button title="نشانه گذاری" class="text-md tag-btn">
+                    <ion-icon
+                      class="card-ticket__icon tag-icon"
+                      name="bookmark-outline"
+                    ></ion-icon>
+                  </button>
+                  <button title="علاقه مندی" class="text-md favs-list-btn">
+                    <ion-icon
+                      class="card-ticket__icon favs-icon"
+                      name="heart"
+                    ></ion-icon>
+                  </button>
+                </div>
+                <a href="#!">
+                  <div
+                    class="new-card-ticket__banner__backdrop">
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h5 class="new-card-ticket__title">تور قشم </h5>
+              <p class="new-card-ticket__status">
+                ظرفیت محدود (۴ نفر)
+              </p>
+            <p class="new-card-ticket__description">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و 
+              </p>
+              <a href="#!" data-te-ripple-init data-te-ripple-color="light"
+                class="new-card-ticket__link">اطلاعات بیشتر</a>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="new-ticket-card-container">
+          <div
+            class="new-card-ticket">
+            <div class="flex">
+              <div
+                class="new-card-ticket__banner group"
+                data-te-ripple-init data-te-ripple-color="light">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/081.webp" class="w-full" />
+                <!-- ======= buttons container ====== -->
+                <div class="flex flex-col gap-1 absolute top-[30px] right-[-50px] group-hover:right-[20px] duration-200 z-10">
+
+                  <buttton class="text-md mb-2" title="افزودن به سبد خرید " href="#" onclick="pushBuyBtn(event)">
+                    <i class='bx bx-cart-add card-ticket__icon'></i>
+                  </buttton>
+                  <button
+                    title="در مورد محصول"
+                    class="text-md"
+                    onclick="event.preventDefault();showMoreInfoModal()"
+                  >
+                    <ion-icon
+                      class="card-ticket__icon"
+                      name="information-outline"
+                    ></ion-icon>
+                  </button>
+                  <button title="نشانه گذاری" class="text-md tag-btn">
+                    <ion-icon
+                      class="card-ticket__icon tag-icon"
+                      name="bookmark-outline"
+                    ></ion-icon>
+                  </button>
+                  <button title="علاقه مندی" class="text-md favs-list-btn">
+                    <ion-icon
+                      class="card-ticket__icon favs-icon"
+                      name="heart"
+                    ></ion-icon>
+                  </button>
+                </div>
+                <a href="#!">
+                  <div
+                    class="new-card-ticket__banner__backdrop">
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h5 class="new-card-ticket__title">تور قشم </h5>
+              <p class="new-card-ticket__status">
+                ظرفیت محدود (۴ نفر)
+              </p>
+            <p class="new-card-ticket__description">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و 
+              </p>
+              <a href="#!" data-te-ripple-init data-te-ripple-color="light"
+                class="new-card-ticket__link">اطلاعات بیشتر</a>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="new-ticket-card-container">
+          <div
+            class="new-card-ticket">
+            <div class="flex">
+              <div
+                class="new-card-ticket__banner group"
+                data-te-ripple-init data-te-ripple-color="light">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/081.webp" class="w-full" />
+                <!-- ======= buttons container ====== -->
+                <div class="flex flex-col gap-1 absolute top-[30px] right-[-50px] group-hover:right-[20px] duration-200 z-10">
+
+                  <buttton class="text-md mb-2" title="افزودن به سبد خرید " href="#" onclick="pushBuyBtn(event)">
+                    <i class='bx bx-cart-add card-ticket__icon'></i>
+                  </buttton>
+                  <button
+                    title="در مورد محصول"
+                    class="text-md"
+                    onclick="event.preventDefault();showMoreInfoModal()"
+                  >
+                    <ion-icon
+                      class="card-ticket__icon"
+                      name="information-outline"
+                    ></ion-icon>
+                  </button>
+                  <button title="نشانه گذاری" class="text-md tag-btn">
+                    <ion-icon
+                      class="card-ticket__icon tag-icon"
+                      name="bookmark-outline"
+                    ></ion-icon>
+                  </button>
+                  <button title="علاقه مندی" class="text-md favs-list-btn">
+                    <ion-icon
+                      class="card-ticket__icon favs-icon"
+                      name="heart"
+                    ></ion-icon>
+                  </button>
+                </div>
+                <a href="#!">
+                  <div
+                    class="new-card-ticket__banner__backdrop">
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h5 class="new-card-ticket__title">تور قشم </h5>
+              <p class="new-card-ticket__status">
+                ظرفیت محدود (۴ نفر)
+              </p>
+            <p class="new-card-ticket__description">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و 
+              </p>
+              <a href="#!" data-te-ripple-init data-te-ripple-color="light"
+                class="new-card-ticket__link">اطلاعات بیشتر</a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+   
+
+        <!-- ===== title ====== -->
+  <div class="divider-container">
+      <div class="divider-container__content">
+        <h4 class="divider-container__title">
+          <i class='bx bx-group divider-container__icon text-[#4361ee]'></i>
+        </h4>
+        <span class="divider-container__text">فروش</span>
+      </div>
+  </div>  
+
+     <!-- ============= START THE SELLING SECTION ================== -->
+      <section id="selling-section" class="mt-10">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-20 items-center px-12">
+
+                <div class="commercial-box-container">
+                  <!-- ===== icon ====== -->
+                  <div class="commercial-box__icon  commercial-box__icon--shadow-blue-gelow"><i class='bx bx-coin text-[30px]'></i></div>
+                    <div class="commercial-box-content">
+                        <div class="commercial-box-content__title">فرصت های شغلی در مجموعه ما بدست آورید</div>
+                        <div class="commercial-box-content__text">همکاری با مجموعه ما میتواند به رشد فروشتان کمک کند</div>
+                    </div>
+                </div>
+
+                <div class="commercial-box-container">
+                  <!-- ===== icon ====== -->
+                  <div class="commercial-box__icon commercial-box__icon--shadow-green-gelow"><i class='bx bx-support text-[30px]'></i></div>
+                    <div class="commercial-box-content">
+                        <div class="commercial-box-content__title">پشتیبانی سریع و ۲۴ ساعته</div>
+                        <div class="commercial-box-content__text">هرگونه مشکل و عدم بازگشت وجه مواجه شدید پشتیبانی سریعا به شما پاسخ میدهد</div>
+                    </div>
+                </div>
+                <div class="commercial-box-container">
+                  <!-- ===== icon ====== -->
+                  <div class="commercial-box__icon commercial-box__icon--shadow-orange-gelow"><i class='bx bx-briefcase text-[30px]'></i></div>
+                    <div class="commercial-box-content">
+                        <div class="commercial-box-content__title">فرصت های شغلی در مجموعه ما بدست آورید</div>
+                        <div class="commercial-box-content__text">همکاری با مجموعه ما میتواند به رشد فروشتان کمک کند</div>
+                    </div>
+                </div>
+
+            </div>
+      </section>
+
+       <!-- ===== title ====== -->
+       <div class="divider-container">
+        <div class="divider-container__content">
+          <h4 class="divider-container__title">
+            <i class='bx bx-list-ul divider-container__icon text-blue-500'></i>
+          </h4>
+          <span class="divider-container__text">سوالات متداول</span>
+        </div>
+    </div>
+
+      <!-- ========================== START THE FAQS ============================ -->
+      <section id="faqs-section">
+        <div class="flex flex-col gap-4 mt-10">
+
+          <!-- faqs item -->
+          <div class="faqs-btn">
+              <div class="faqs-title">
+                <i class='bx bxs-film shrink-0'></i>
+                  چگونه بلیط خود را کنسل کنیم؟
+                  <i class='bx bx-chevron-down faqs-btn__chevron'></i>
+              </div>
+              <!-- faqs description -->
+              <div class="faqs-description mt-5">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+              </div>
+          </div>
+
+          <!-- faqs item -->
+          <div class="faqs-btn">
+            <div class="faqs-title">
+              <i class='bx bx-money shrink-0'></i>
+                چه  درصدی از مبلغ بعد از کنسل کردن بلیط به عنوان غرامت گرفته میشود؟
+                <i class='bx bx-chevron-down faqs-btn__chevron'></i>
+            </div>
+            <!-- faqs description -->
+            <div class="faqs-description mt-5">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            </div>
+        </div>
+
+        <!-- faqs item -->
+        <div class="faqs-btn">
+          <div class="faqs-title">
+            <i class='bx bx-notepad shrink-0'></i>
+            چگونه رسید خرید بلیط را دریافت کنیم؟
+              <i class='bx bx-chevron-down faqs-btn__chevron'></i>
+          </div>
+          <!-- faqs description -->
+          <div class="faqs-description mt-5">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+          </div>
+      </div>
+
+      <!-- faqs item -->
+      <div class="faqs-btn">
+        <div class="faqs-title">
+          <i class='bx bx-wallet-alt shrink-0'></i>
+              هزینه بلیط را پرداخت کردم اما فعال نشد چرا؟
+            <i class='bx bx-chevron-down faqs-btn__chevron'></i>
+        </div>
+        <!-- faqs description -->
+        <div class="faqs-description mt-5">
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+        </div>
+    </div>
+
+    <!-- faqs item -->
+    <div class="faqs-btn">
+      <div class="faqs-title">
+        <i class='bx bx-film shrink-0'></i>
+        آیا میتوان سانس بلیط را پس از خرید تعویض نمود؟
+          <i class='bx bx-chevron-down faqs-btn__chevron'></i>
+      </div>
+      <!-- faqs description -->
+      <div class="faqs-description mt-5">
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+      </div>
+  </div>
+
+
+      </div>
+  </section>
+
+
+       <!-- ===== title ====== -->
+  <div class="divider-container">
+      <div class="divider-container__content">
+        <h4 class="divider-container__title">
+          <i class='bx bx-news divider-container__icon text-[#06d6a0]'></i>
+        </h4>
+        <span class="divider-container__text">آخرین ها</span>
+      </div>
+  </div>  
+
+      <!-- ======================== START RECENTLY ADDED =================== -->
+      <section id="recently-added" class="mt-10">
+
+            <div class="flex flex-col gap-5">
+                <!-- item one -->
+                <div class="latests-card-container">
+                    <img class="latests-card__banner" src="https://picsum.photos/id/211/600/400" alt="">
+                    <!-- ===== detail ====== -->
+                    <div class="latests-card-content">
+                        <div class="latests-card__title">عنوان کامل</div>
+                        <div class="latests-card__text">
+                          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام 
+                        </div>
+                        <!-- link -->
+                      <div class="flex justify-start mt-3">
+                        <a class="latests-card__link group" href="#">
+                          اطلاعات بیشتر
+                          <i class='bx bx-left-arrow-alt latests-card__link__icon'></i>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+                <!-- item two -->
+                <div class="latests-card-container">
+                  <img class="latests-card__banner" src="https://picsum.photos/id/212/600/400" alt="">
+                  <!-- ===== detail ====== -->
+                  <div class="latests-card-content">
+                      <div class="latests-card__title">عنوان کامل</div>
+                      <div class="latests-card__text">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام 
+                      </div>
+                      <!-- link -->
+                    <div class="flex justify-start mt-3">
+                      <a class="latests-card__link group" href="#">
+                        اطلاعات بیشتر
+                        <i class='bx bx-left-arrow-alt latests-card__link__icon'></i>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <!-- item three -->
+              <div class="latests-card-container">
+                <img class="latests-card__banner" src="https://picsum.photos/id/215/600/400" alt="">
+                <!-- ===== detail ====== -->
+                <div class="latests-card-content">
+                    <div class="latests-card__title">عنوان کامل</div>
+                    <div class="latests-card__text">
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام 
+                    </div>
+                    <!-- link -->
+                  <div class="flex justify-start mt-3">
+                    <a class="latests-card__link group" href="#">
+                      اطلاعات بیشتر
+                      <i class='bx bx-left-arrow-alt latests-card__link__icon'></i>
+                    </a>
+                  </div>
+                </div>
+            </div>
+
+            </div>
+      </section>
+
+        <!-- ===== title ====== -->
+    <div class="divider-container">
+      <div class="divider-container__content">
+        <h4 class="divider-container__title">
+          <i class='bx bx-conversation divider-container__icon text-[#4361ee]'></i>
+        </h4>
+        <span class="divider-container__text">دیدگاه ها</span>
+      </div>
+  </div>  
+
+  <!-- ================================ START THE COMMENT SECTION ======================================= -->
+
+    <section id="comment-section" class="comment-section">
+      <div class="comment-section-content-container">
+          <div class="comment-section-header">
+            <h2 class="comment-section-header__title">
+              دیدگاه ها (۲۰)
+            </h2>
+        </div>
+        <form class="mb-6">
+            <div class="my-comment">
+                <label for="comment" class="sr-only">Your comment</label>
+                <textarea id="comment" rows="6"
+                    class="my-comment__textarea "
+                    placeholder="دیدگاه خود را بنویسید ..." required></textarea>
+            </div>
+            <button type="submit"
+                class="comment-submit-button">
+              ارسال دیدگاه
+            </button>
+        </form>
+        <article class="first-card-comment">
+            <div class="card-comment-container">
+                <div class="flex items-center">
+                    <p class="card-comment__header"><img
+                            class="card-comment__profile-img"
+                            src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                            alt="Michael Gough">نام کاربر</p>
+                    <p class="card-comment__date"><time 
+                            >۱۲ آبان ۱۴۰۲</time></p>
+                </div>
+                <button id="dropdownComment1Button" data-dropdown-toggle="dropdownComment1"
+                    class="dropdown-comment__button "
+                    type="button">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                        <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                    </svg>
+                    <span class="sr-only">Comment settings</span>
+                </button>
+                <!-- Dropdown menu -->
+                <div id="dropdownComment1"
+                    class="dropdown-comment hidden">
+                    <ul class="dropdown-comment__list"
+                        aria-labelledby="dropdownMenuIconHorizontalButton">
+                        <li>
+                            <a href="#"
+                                class="dropdown-comment__item">ویرایش</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="dropdown-comment__item">حذف</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="dropdown-comment__item">گزارش</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="card-comment__description">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای 
+              </p>
+            <div class="card-comment__reply-button-container">
+                <button type="button"
+                    class="card-comment__reply-button">
+                    <svg class="card-comment__reply-button__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5h5M5 8h2m6-3h2m-5 3h6m2-7H2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h3v5l5-5h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"/>
+                    </svg>
+                    پاسخ
+                </button>
+            </div>
+        </article>
+        <article class="replied-card-comment">
+            <div class="card-comment-container">
+                <div class="flex items-center">
+                    <p class="card-comment__header"><img
+                            class="card-comment__profile-img"
+                            src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                            alt="Jese Leos">نام کاربر</p>
+                    <p class="card-comment__date"><time 
+                            title="February 12th, 2022">۱۲ آبان ۱۴۰۲</time></p>
+                </div>
+                <button id="dropdownComment2Button" data-dropdown-toggle="dropdownComment2"
+                    class="dropdown-comment__button "
+                    type="button">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                        <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                    </svg>
+                    <span class="sr-only">Comment settings</span>
+                </button>
+                <!-- Dropdown menu -->
+                <div id="dropdownComment2"
+                    class="dropdown-comment hidden ">
+                    <ul class="dropdown-comment__list "
+                        aria-labelledby="dropdownMenuIconHorizontalButton">
+                        <li>
+                            <a href="#"
+                                class="dropdown-comment__item">ویرایش</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="dropdown-comment__item">حذف</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="dropdown-comment__item">گزارش</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="card-comment__description">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و 
+            </p>
+            <div class="card-comment__reply-button-container">
+                <button type="button"
+                    class="card-comment__reply-button">
+                    <svg class="card-comment__reply-button__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5h5M5 8h2m6-3h2m-5 3h6m2-7H2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h3v5l5-5h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"/>
+                    </svg>                
+                    پاسخ
+                </button>
+            </div>
+        </article>
+        <article class="card-comment">
+            <div class="card-comment-container">
+                <div class="flex items-center">
+                    <p class="card-comment__header"><img
+                            class="card-comment__profile-img"
+                            src="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
+                            alt="Bonnie Green">نام کاربر</p>
+                    <p class="card-comment__date"><time 
+                            >۱۲ مهر ۱۴۰۲</time></p>
+                </div>
+                <button id="dropdownComment3Button" data-dropdown-toggle="dropdownComment3"
+                    class="dropdown-comment__button "
+                    type="button">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                        <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                    </svg>
+                    <span class="sr-only">Comment settings</span>
+                </button>
+                <!-- Dropdown menu -->
+                <div id="dropdownComment3"
+                    class="dropdown-comment hidden ">
+                    <ul class="dropdown-comment__list "
+                        aria-labelledby="dropdownMenuIconHorizontalButton">
+                        <li>
+                            <a href="#"
+                                class="dropdown-comment__item">ویرایش</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="dropdown-comment__item">حذف</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="dropdown-comment__item">گزارش</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="card-comment__description">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت 
+            </p>
+            <div class="card-comment__reply-button-container">
+                <button type="button"
+                    class="card-comment__reply-button">
+                    <svg class="card-comment__reply-button__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5h5M5 8h2m6-3h2m-5 3h6m2-7H2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h3v5l5-5h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"/>
+                    </svg>
+                    پاسخ
+                </button>
+            </div>
+        </article>
+        <article class="card-comment">
+            <div class="card-comment-container">
+                <div class="flex items-center">
+                    <p class="card-comment__header"><img
+                            class="card-comment__profile-img"
+                            src="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
+                            alt="Helene Engels">نام کاربر</p>
+                    <p class="card-comment__date"><time 
+                          >۱۳ دی ۱۴۰۲</time></p>
+                </div>
+                <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4"
+                    class="dropdown-comment__button "
+                    type="button">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                        <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                    </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div id="dropdownComment4"
+                    class="dropdown-comment hidden">
+                    <ul class="dropdown-comment__list "
+                        aria-labelledby="dropdownMenuIconHorizontalButton">
+                        <li>
+                            <a href="#"
+                                class="dropdown-comment__item">ویرایش</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="dropdown-comment__item">حذف</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="dropdown-comment__item">گزارش</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="card-comment__description">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که 
+            </p>
+            <div class="card-comment__reply-button-container">
+                <button type="button"
+                    class="card-comment__reply-button">
+                    <svg class="card-comment__reply-button__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5h5M5 8h2m6-3h2m-5 3h6m2-7H2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h3v5l5-5h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"/>
+                    </svg>
+                    پاسخ
+                </button>
+            </div>
+        </article>
+      </div>
+    </section>
+      
+    </main>
+
+    <!-- =========================== START THE MODALS ================================= -->
+
+    <!-- ======================= basket modal ====================== -->
+    <div
+      class="fixed-modal"
+      id="basket"
+    >
+      <div class="user-basket-modal">
+        <div class="user-basket-modal-header">
+          سبد خرید
+          <button onclick="hideBasket()">
+            <ion-icon class="user-basket-modal__close-button" name="close-circle-outline"></ion-icon>
+          </button>
+        </div>
+        <hr />
+        <div class="fixed-modal-container__content">
+          <p class="mb-8 font-bold">بلیط های افزوده شده به سبد خرید :</p>
+          <!-- subject -->
+          <p class="user-basket-modal__title">
+            شوی ستارگان | سانس 26 دوشنبه 16 مرداد 1402:
+          </p>
+          <table class="modal-table">
+            <thead class="modal-table__thead">
+              <tr>
+                <th scope="col" class="px-6 py-3">ردیف</th>
+                <th scope="col" class="px-6 py-3">عنوان</th>
+                <th scope="col" class="px-6 py-3">تعداد</th>
+                <th scope="col" class="px-6 py-3">قیمت</th>
+                <th scope="col" class="px-6 py-3">حذف</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="modal-table__row">
+                <th scope="row" class="modal-table__row__th">1</th>
+                <td class="px-6 py-4">اکونومی | ECO</td>
+                <td class="px-6 py-4">2</td>
+                <td class="px-6 py-4">12،700،000</td>
+                <td class="px-6 py-4">
+                  <button>
+                    <ion-icon class="w-8 h-8 text-red-500" name="trash-outline"></ion-icon>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- subject -->
+          <p class="user-basket-modal__title">
+            رستوران شاندیز | سانس شام سه شنبه 17 مرداد 1402
+          </p>
+          <table class="modal-table">
+            <thead class="modal-table__thead">
+              <tr>
+                <th scope="col" class="px-6 py-3">ردیف</th>
+                <th scope="col" class="px-6 py-3">عنوان</th>
+                <th scope="col" class="px-6 py-3">تعداد</th>
+                <th scope="col" class="px-6 py-3">قیمت</th>
+                <th scope="col" class="px-6 py-3">حذف</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="modal-table__row">
+                <th scope="row" class="modal-table__row__th">1</th>
+                <td class="px-6 py-4">هزینه رزرو</td>
+                <td class="px-6 py-4">4</td>
+                <td class="px-6 py-4">18،700،000</td>
+                <td class="px-6 py-4">
+                  <button>
+                    <ion-icon class="w-8 h-8 text-red-500" name="trash-outline"></ion-icon>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- subject -->
+          <p class="user-basket-modal__title">
+            کشتی تفریحی آرتمس پلاس | کشتی آرتمیس 21:00 الی 2:00 چهارشنبه 18 مرداد 1402
+          </p>
+          <table class="modal-table">
+            <thead class="modal-table__thead">
+              <tr>
+                <th scope="col" class="px-6 py-3">ردیف</th>
+                <th scope="col" class="px-6 py-3">عنوان</th>
+                <th scope="col" class="px-6 py-3">تعداد</th>
+                <th scope="col" class="px-6 py-3">قیمت</th>
+                <th scope="col" class="px-6 py-3">حذف</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="modal-table__row">
+                <th scope="row" class="modal-table__row__th">1</th>
+                <td class="px-6 py-4">کشتی آرتمیس با پذیرایی</td>
+                <td class="px-6 py-4">2</td>
+                <td class="px-6 py-4">43،800،000</td>
+                <td class="px-6 py-4">
+                  <button>
+                    <ion-icon class="w-8 h-8 text-red-500" name="trash-outline"></ion-icon>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr />
+
+        <!-- button -->
+        <div class="flex justify-center mt-6">
+          <button
+            class="group w-1/2 btn-outline btn-outline--success final-payment-btn"
+          >
+          <box-icon class="btn-outline-final-payment__icon" type='solid' name='shopping-bag-alt'></box-icon>
+            نهایی کردن خرید
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== START THE FINAL PAYMENT MODAL ======================= -->
+    <div class="final-payment-modal hidden">
+      <!-- close button and timer -->
+      <div class="flex justify-between">
+          <div class="font-bold">خرید نهایی</div>
+          <div class="flex items-center gap-3">
+              <button><ion-icon class="final-payment-modal__close-button" name="close-circle-outline"></ion-icon></button>
+             <div class="final-payment-modal__timer">1:00</div>
+          </div>
+      </div>
+      <hr>
+      <!-- ====== final payment content ======= -->
+      <div class="final-payment-modal__content">
+       <!-- =========== payment steps ========= -->
+      <div class="grid grid-cols-3 gap-4 mt-10">
+
+        <div class="final-payment-modal__box">
+          <div><img class="w-10" src="../img/icons/customer.png" alt=""></div>
+          <div class="final-payment-modal__detail">۱.مشخصات مشتری</div>
+        </div>
+
+        <div class="final-payment-modal__box">
+            <div><img class="w-10" src="../img/icons/to-do.png" alt=""></div>
+            <div class="final-payment-modal__detail">۲.آیتم های سبد خرید شما</div>
+          </div>
+
+          <div class="final-payment-modal__box">
+            <div><img class="w-10" src="../img/icons/payment-method.png" alt=""></div>
+            <div class="final-payment-modal__detail">۳.پرداخت</div>
+          </div>
+    </div>
+    <!-- payment information -->
+    <div class="title mt-10">
+        فاکتور :
+    </div>
+   <div class="grid grid-cols-3 gap-3 mt-10">
+    <div class="final-payment-modal__box">
+        <div class="final-payment-modal__detail align-icon">
+            <img class="w-7" src="../img/icons/payment.png" alt="">
+            مبلغ پرداختی آژانس
+        </div>
+        <div class="final-payment-modal__detail">۵,۴۹۳,۶۰۰</div>
+      </div>
+
+      <div class="final-payment-modal__box">
+        <div class="final-payment-modal__detail align-icon">
+            <img class="w-7" src="../img/icons/money.png" alt="">
+            کمیسیون
+        </div>
+          <div class="final-payment-modal__detail">۶۳۰,۴۰۰</div>
+        </div>
+
+        <div class="final-payment-modal__box">
+            <div class="final-payment-modal__detail align-icon">
+                <img class="w-7" src="../img/icons/wallet.png" alt="">
+                مبلغ پرداختی توسط مشتری
+            </div>
+          <div class="final-payment-modal__detail">۵,۱۰۴,۰۰۰</div>
+        </div>
+   </div>   
+   <!-- select -->
+   <div class=" flex justify-center mt-14">
+    <button class="btn-outline btn-outline--blue px-10">
+        انتخاب رابط فروش
+    </button>
+</div>
+<!-- payment method -->
+<div class="title mt-10">
+    نحوه ی پرداخت :
+</div>  
+    <!-- radio button -->
+    <div class="final-payment-modal__radio-buttons-container">
+
+        <div class="final-payment-modal__radio-box">
+            <label class="final-payment-modal__radio-box__label">
+                <input class="final-payment-modal__radio-box__input" type="radio" name="sfg" />
+                <div class="final-payment-modal__radio-box__label__text ">کسر از اعتبار</div>
+              </label>
+              <!-- more details -->
+              <div class="final-payment-modal__radio-box__description" >از طریق سیستم خود با کیف پول تهیه کننده پرداخت کنید </div>
+        </div>
+
+        <div class="final-payment-modal__radio-box">
+            <label class="final-payment-modal__radio-box__label">
+                <input class="final-payment-modal__radio-box__input" type="radio" name="sfg" />
+                <div class="final-payment-modal__radio-box__label__text">خرید مستقیم</div>
+              </label>
+              <!-- more details -->
+              <div class="final-payment-modal__radio-box__description" >مبلغ فاکتور را از طریق درگاه پرداخت کنید</div>
+        </div>
+
+        <div class="final-payment-modal__radio-box">
+            <label class="final-payment-modal__radio-box__label">
+                <input class="final-payment-modal__radio-box__input" type="radio" name="sfg" />
+                <div class="final-payment-modal__radio-box__label__text ">پرداخت توسط لینک</div>
+              </label>
+              <!-- more details -->
+              <div class="final-payment-modal__radio-box__description" >لینک پرداخت را برای مشتری بفرستید و مستقیما توسط مشتری پرداخت شود</div>
+        </div>
+
+    </div>
+    <!-- cart information -->
+    <div class="relative mt-14 mb-3" data-te-input-wrapper-init>
+        <textarea
+          class="peer form-textarea"
+          id="exampleFormControlTextarea1" rows="5" placeholder="Your message" data-input-text></textarea>
+        <label for="tw-elements"
+          class="textarea-label">
+          توضیحات سبد خرید (صندوق )
+        </label>
+      </div>
+      <!-- ======== buy button ======= -->
+
+      <div class="flex justify-end">
+          <button class="btn btn--blue-500">خرید نهایی</button>
+      </div>
+      <!-- warning modal -->
+      <div class="final-payment-modal__warning-alert">
+        <ion-icon class="warning-alert-icon" name="warning"></ion-icon>
+        مبلغ قابل پرداخت توسط مشتری با مبلغ دریافتی صندوق برقرار نیست 
+      </div>
+      </div>
+
+  </div>
+
+  
+
+    <!-- ================= select sans modal ================= -->
+
+    <div style="padding: 0;"
+      class="fixed-modal fixed-modal-sans"
+      id="selectSansModal"
+    >
+      <div class="fixed-modal-sans-container">
+        <div class="fixed-modal-sans-container__content">
+          <div class="flex items-center justify-between mb-5">
+            <p class="font-bold">رستوران صفدری ساحلی</p>
+            <div>
+              <button onclick="hideSansModal()">
+                <ion-icon class="w-8 h-8 text-red-500" name="close-circle-outline"></ion-icon>
+              </button>
+              <button>
+                <ion-icon
+                  class="w-8 h-8 bg-[#4576ef] rounded-full text-white"
+                  name="refresh-circle-outline"
+                ></ion-icon>
+              </button>
+            </div>
+          </div>
+          <hr />
+            <!-- rules and more information boxes  -->
+      <div class="fixed-modal-sans-description-container">
+        <div class="modal-sans-description-card">
+          <p class="p-2">توضیحات</p>
+          <hr />
+          <p class="modal-sans-description-card__text">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
+            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای
+            زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+            متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+            رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد
+            کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
+            راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+            حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+            طراحی اساسا مورد استفاده قرار گیرد.
+          </p>
+        </div>
+
+        <div class="modal-sans-description-card">
+          <p class="p-2">قوانین و مقررات</p>
+          <hr />
+          <p class="modal-sans-description-card__text">
+            هر بلیط مخصوص یک نفر می باشد. در صورت عدم سفارش غذا واستفاده از منوی
+            کافی شاپ هزینه رزرو کسر نخواهد شد . مبلغ 2.200 تومان مالیات بر ارزش
+            افزوده رزرو شما می باشد.
+          </p>
+        </div>
+      </div>
+          <div class="fixed-modal-sans-content-container">
+            <div class="flex flex-col gap-5 mt-10">
+              <ol class="fixed-modal-sans-list" id="sansList">
+                <li class="mb-2 mr-6">
+                  <span
+                    class="fixed-modal-sans-container__content-icon"
+                  >
+                    <svg
+                      class="w-2.5 h-2.5 text-blue-500"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <div class="flex w-full">
+                    <h3
+                      class="fixed-modal-sans__description"
+                    >
+                      پنجشبه 16 شهریور 1402
+                    </h3>
+                    <div  class="fixed-modal-sans-conainer__content-box">
+                      <div class="modal-sans-boxes-container">
+                        <button class="fixed-modal-sans-container__content-box__button">
+                           <!-- mobiel view detail -->
+                          <span class="modal-sans-date">پنجشنبه ۱۶ شهریور ۱۴۰۲</span>
+                          سانس شام 10 - 20
+                          <span
+                            class="fixed-modal-sans-container__content-box__button__number bg-green-600"
+                            >20</span
+                          >
+                         
+                        </button>
+                        <button class="fixed-modal-sans-container__content-box__button">
+                           <!-- mobiel view detail -->
+                          <span class="modal-sans-date">پنجشنبه ۱۶ شهریور ۱۴۰۲</span>
+                          سانس شام 10 - 20
+                          <span
+                            class="fixed-modal-sans-container__content-box__button__number bg-green-600"
+                            >20</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="mb-2 mr-6">
+                  <span
+                    class="fixed-modal-sans-container__content-icon"
+                  >
+                    <svg
+                      class="w-2.5 h-2.5 text-blue-500"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <div class="flex w-full">
+                    <h3
+                      class="fixed-modal-sans__description"
+                    >
+                      پنجشبه 16 شهریور 1402
+                    </h3>
+                    <div class="fixed-modal-sans-conainer__content-box">
+                      <div class="modal-sans-boxes-container">
+                        <button class="fixed-modal-sans-container__content-box__button">
+                           <!-- mobiel view detail -->
+                          <span class="modal-sans-date">پنجشنبه ۱۶ شهریور ۱۴۰۲</span>
+                          سانس شام 10 - 20
+                          <span
+                            class="fixed-modal-sans-container__content-box__button__number bg-red-600"
+                            >20</span
+                          >
+                        </button>
+                        <button class="fixed-modal-sans-container__content-box__button">
+                           <!-- mobiel view detail -->
+                          <span class="modal-sans-date">پنجشنبه ۱۶ شهریور ۱۴۰۲</span>
+                          سانس شام 10 - 20
+                          <span
+                            class="fixed-modal-sans-container__content-box__button__number bg-red-600"
+                            >20</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="mb-2 mr-6">
+                  <span
+                    class="fixed-modal-sans-container__content-icon"
+                  >
+                    <svg
+                      class="w-2.5 h-2.5 text-blue-500"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <div class="flex w-full">
+                    <h3
+                      class="fixed-modal-sans__description"
+                    >
+                      پنجشبه 16 شهریور 1402
+                    </h3>
+                    <div class="fixed-modal-sans-conainer__content-box">
+                      <div class="modal-sans-boxes-container">
+                        <button class="fixed-modal-sans-container__content-box__button">
+                           <!-- mobiel view detail -->
+                          <span class="modal-sans-date">پنجشنبه ۱۶ شهریور ۱۴۰۲</span>
+                          سانس شام 10 - 20
+                          <span
+                            class="fixed-modal-sans-container__content-box__button__number bg-orange-600"
+                            >20</span
+                          >
+                        </button>
+                        <button class="fixed-modal-sans-container__content-box__button">
+                           <!-- mobiel view detail -->
+                          <span class="modal-sans-date">پنجشنبه ۱۶ شهریور ۱۴۰۲</span>
+                          سانس شام 10 - 20
+                          <span
+                            class="fixed-modal-sans-container__content-box__button__number bg-orange-600 "
+                            >20</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="hidden mb-2 mr-6">
+                  <span
+                    class="fixed-modal-sans-container__content-icon"
+                  >
+                    <svg
+                      class="w-2.5 h-2.5 text-blue-500"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <div class="flex w-full">
+                    <h3
+                      class="fixed-modal-sans__description"
+                    >
+                      پنجشبه 16 شهریور 1402
+                    </h3>
+                    <div class="fixed-modal-sans-conainer__content-box">
+                      <div class="modal-sans-boxes-container">
+                        <button class="fixed-modal-sans-container__content-box__button">
+                           <!-- mobiel view detail -->
+                          <span class="modal-sans-date">پنجشنبه ۱۶ شهریور ۱۴۰۲</span>
+                          سانس شام 10 - 20
+                          <span
+                            class="fixed-modal-sans-container__content-box__button__number bg-orange-600  "
+                            >20</span
+                          >
+                        </button>
+                        <button class="fixed-modal-sans-container__content-box__button">
+                           <!-- mobiel view detail -->
+                          <span class="modal-sans-date">پنجشنبه ۱۶ شهریور ۱۴۰۲</span>
+                          سانس شام 10 - 20
+                          <span
+                            class="fixed-modal-sans-container__content-box__button__number bg-orange-600  "
+                            >20</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="hidden mb-2 mr-6">
+                  <span
+                    class="fixed-modal-sans-container__content-icon"
+                  >
+                    <svg
+                      class="w-2.5 h-2.5 text-blue-500"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <div class="flex w-full">
+                    <h3
+                      class="fixed-modal-sans__description"
+                    >
+                      پنجشبه 16 شهریور 1402
+                    </h3>
+                    <div class="fixed-modal-sans-conainer__content-box">
+                      <div class="modal-sans-boxes-container">
+                        <button class="fixed-modal-sans-container__content-box__button">
+                           <!-- mobiel view detail -->
+                          <span class="modal-sans-date">پنجشنبه ۱۶ شهریور ۱۴۰۲</span>
+                          
+                          سانس شام 10 - 20
+                          <span
+                            class="fixed-modal-sans-container__content-box__button__number bg-red-600"
+                            >20</span
+                          >
+                        </button>
+                        <button class="fixed-modal-sans-container__content-box__button">
+                           <!-- mobiel view detail -->
+                          <span class="modal-sans-date">پنجشنبه ۱۶ شهریور ۱۴۰۲</span>
+                          سانس شام 10 - 20
+                          <span
+                            class="fixed-modal-sans-container__content-box__button__number bg-red-600 "
+                            >20</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="hidden mb-2 mr-6">
+                  <span
+                    class="fixed-modal-sans-container__content-icon"
+                  >
+                    <svg
+                      class="w-2.5 h-2.5 text-blue-500"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <div class="flex w-full">
+                    <h3
+                      class="fixed-modal-sans__description"
+                    >
+                      پنجشبه 16 شهریور 1402
+                    </h3>
+                    <div class="fixed-modal-sans-conainer__content-box">
+                      <div class="modal-sans-boxes-container">
+                        <button class="fixed-modal-sans-container__content-box__button">
+                           <!-- mobiel view detail -->
+                          <span class="modal-sans-date">پنجشنبه ۱۶ شهریور ۱۴۰۲</span>
+                          سانس شام 10 - 20
+                          <span
+                            class="fixed-modal-sans-container__content-box__button__number bg-green-600"
+                            >20</span
+                          >
+                        </button>
+                        <button class="fixed-modal-sans-container__content-box__button">
+                           <!-- mobiel view detail -->
+                          <span class="modal-sans-date">پنجشنبه ۱۶ شهریور ۱۴۰۲</span>
+                          سانس شام 10 - 20
+                          <span
+                            class="fixed-modal-sans-container__content-box__button__number bg-green-600 "
+                            >20</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="hidden mb-2 mr-6">
+                  <span
+                    class="fixed-modal-sans-container__content-icon"
+                  >
+                    <svg
+                      class="w-2.5 h-2.5 text-blue-500"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <div class="flex w-full">
+                    <h3
+                      class="fixed-modal-sans__description"
+                    >
+                      پنجشبه 16 شهریور 1402
+                    </h3>
+                    <div class="fixed-modal-sans-conainer__content-box">
+                      <div class="modal-sans-boxes-container">
+                        <button class="fixed-modal-sans-container__content-box__button">
+                           <!-- mobiel view detail -->
+                          <span class="modal-sans-date">پنجشنبه ۱۶ شهریور ۱۴۰۲</span>
+                          سانس شام 10 - 20
+                          <span
+                            class="fixed-modal-sans-container__content-box__button__number bg-green-600"
+                            >20</span
+                          >
+                        </button>
+                        <button class="fixed-modal-sans-container__content-box__button">
+                           <!-- mobiel view detail -->
+                          <span class="modal-sans-date">پنجشنبه ۱۶ شهریور ۱۴۰۲</span>
+                          سانس شام 10 - 20
+                          <span
+                            class="fixed-modal-sans-container__content-box__button__number bg-green-600 "
+                            >20</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="hidden mb-2 mr-6">
+                  <span
+                    class="fixed-modal-sans-container__content-icon"
+                  >
+                    <svg
+                      class="w-2.5 h-2.5 text-blue-500"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <div class="flex w-full">
+                    <h3
+                      class="fixed-modal-sans__description"
+                    >
+                      پنجشبه 16 شهریور 1402
+                    </h3>
+                    <div class="fixed-modal-sans-conainer__content-box">
+                      <div class="modal-sans-boxes-container">
+                        <button class="fixed-modal-sans-container__content-box__button">
+                           <!-- mobiel view detail -->
+                          <span class="modal-sans-date">پنجشنبه ۱۶ شهریور ۱۴۰۲</span>
+                          سانس شام 10 - 20
+                          <span
+                            class="fixed-modal-sans-container__content-box__button__number bg-orange-600"
+                            >20</span
+                          >
+                        </button>
+                        <button class="fixed-modal-sans-container__content-box__button">
+                           <!-- mobiel view detail -->
+                          <span class="modal-sans-date">پنجشنبه ۱۶ شهریور ۱۴۰۲</span>
+                          سانس شام 10 - 20
+                          <span
+                            class="fixed-modal-sans-container__content-box__button__number bg-orange-600 "
+                            >20</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+  
+              <button
+                class="fixed-modal-sans__more-button"
+                id="more"
+              >
+                بیشتر
+              </button>
+            </div>
+            <div class="fixed-modal-sans__table-container">
+              <table class="fixed-modal-sans__table">
+                <thead class="fixed-modal-sans__table-thead">
+                  <tr>
+                    <th scope="col" class="px-6 py-3">عنوان</th>
+                    <th scope="col" class="px-6 py-3">ظرفیت</th>
+                    <th scope="col" class="px-6 py-3">خرید</th>
+                    <th scope="col" class="px-6 py-3">کمیسیون</th>
+                    <th scope="col" class="px-6 py-3">مبلغ بلیط</th>
+                    <th scope="col" class="px-6 py-3">تعداد</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="fixed-modal-sans__table-row"
+                  >
+                    <td class="px-6 py-4">اکونومی | ECG</td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="fixed-modal-sans-container__content-box__button__number bg-orange-600"
+                      >
+                        10
+                      </span>
+                    </td>
+                    <td class="px-6 py-4">450،000</td>
+                    <td class="px-6 py-4">2،750،000</td>
+                    <td class="px-6 py-4">3،700،000</td>
+                    <td class="px-6 py-4">
+                      <div class="flex gap-2">
+                        <button class="increase-button" data-id="1">
+                          <ion-icon class="text-xl text-green-400" name="add-circle"></ion-icon>
+                        </button>
+                        <span class="counter" class="text-sm" data-id="1">0</span>
+                        <input type="hidden" class="counter" name="counter" data-id="1" value="0" />
+    
+                        <button class="decrease-button" data-id="1">
+                          <ion-icon class="text-xl text-red-400" name="remove-circle"></ion-icon>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="bg-blue-200 bg-opacity-30 hover:bg-blue-300 hover:bg-opacity-30 text-gray-950"
+                  >
+                    <td class="px-6 py-4">خصوصی | VIP</td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="fixed-modal-sans-container__content-box__button__number bg-orange-600"
+                      >
+                        10
+                      </span>
+                    </td>
+                    <td class="px-6 py-4">450،000</td>
+                    <td class="px-6 py-4">2،750،000</td>
+                    <td class="px-6 py-4">3،700،000</td>
+    
+                    <td class="px-6 py-4">
+                      <div class="flex gap-2">
+                        <button class="increase-button" data-id="2">
+                          <ion-icon class="text-xl text-green-400" name="add-circle"></ion-icon>
+                        </button>
+                        <span class="counter" class="text-sm" data-id="2">0</span>
+                        <input type="hidden" class="counter" name="counter" data-id="2" value="0" />
+    
+                        <button class="decrease-button" data-id="2">
+                          <ion-icon class="text-xl text-red-400" name="remove-circle"></ion-icon>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="fixed-modal-sans__table-row"
+                  >
+                    <td class="px-6 py-4">معمولی</td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="fixed-modal-sans-container__content-box__button__number bg-orange-600"
+                      >
+                        10
+                      </span>
+                    </td>
+                    <td class="px-6 py-4">450،000</td>
+                    <td class="px-6 py-4">2،750،000</td>
+                    <td class="px-6 py-4">3،700،000</td>
+                    <td class="px-6 py-4">
+                      <div class="flex gap-2">
+                        <button class="increase-button" data-id="3">
+                          <ion-icon class="text-xl text-green-400" name="add-circle"></ion-icon>
+                        </button>
+                        <span class="counter" class="text-sm" data-id="3">0</span>
+                        <input type="hidden" class="counter" name="counter" data-id="3" value="0" />
+    
+                        <button class="decrease-button" data-id="3">
+                          <ion-icon class="text-xl text-red-400" name="remove-circle"></ion-icon>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- ======== START THE MODAL BUTTTONS ============== -->
+          <div class="grid grid-cols-2 media-540px:grid-cols-4 gap-3 mt-8">
+            <button
+              class="btn btn--responsive bg-green-400"
+              onclick="hideSansModal();showSelectBank()"
+            >
+              <ion-icon class="fixed-modal-sans__button__icon" name="cart-outline"></ion-icon>
+              خرید نهایی
+            </button>
+            <button
+              class="btn btn--responsive bg-blue-400"
+            >
+              <ion-icon class="fixed-modal-sans__button__icon" name="cart"></ion-icon>
+              افزودن به سبد خرید
+            </button>
+            <button
+              class="btn btn--responsive bg-red-400"
+              onclick="hideSansModal();"
+            >
+              <ion-icon class="fixed-modal-sans__button__icon" name="close"></ion-icon>
+              بستن
+            </button>
+            <!-- final price -->
+            <div class="btn btn--responsive bg-[#14213d]">
+                قیمت نهایی ۳۲۰۰۰۰۰ تومان
+            </div>
+          </div>
+
+        </div>
+      </div>      
+    </div>
+
+    <!-- ============== new customer information ============== -->
+    <div
+      class="fixed-modal modal--scroll"
+      id="userInsertDataModal"
+    >
+      <div class="fixed-modal-user-information">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-gray-500">سبد خرید جدید</span>
+          <button onclick="hideUserInsertData()">
+            <ion-icon class="w-8 h-8 text-red-500" name="close-circle"></ion-icon>
+          </button>
+        </div>
+        <hr />
+        <div class="mt-8 text-center">مشخصات مشتری جدید</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-8 mt-8">
+
+          <div class="relative w-full">
+            <input
+              autocomplete="off"
+              id="user-name"
+              name="username"
+              type="text"
+              class="peer fixed-modal-user-information__input"
+              placeholder="نام کامل"
+            />
+            <label
+              for="user-name"
+              class="fixed-modal-user-information__label"
+              >نام کامل *</label
+            >
+            <div id="username-error" class="input-error hidden">
+              این نام کاربری قبلا ثبت شده است !
+            </div>
+          </div>
+
+          <div class="relative w-full">
+            <input
+              autocomplete="off"
+              id="phoneNumber"
+              name="username"
+              type="text"
+              class="peer fixed-modal-user-information__input"
+              placeholder="شماره موبایل"
+            />
+            <label
+              for="phoneNumber"
+              class="fixed-modal-user-information__label"
+            >
+              شماره موبایل *</label
+            >
+            <div id="phoneNumber-error" class="input-error hidden">
+              این شماره قبلا ثبت شده است !
+            </div>
+          </div>
+
+          <div class="relative w-full">
+            <input
+              autocomplete="off"
+              id="electro-post"
+              name="username"
+              type="text"
+              class="peer fixed-modal-user-information__input"
+              placeholder="پست الکترونیک"
+            />
+            <label
+              for="electro-post"
+              class="fixed-modal-user-information__label"
+              >پست الکترونیک</label
+            >
+            <div id="electro-post-error" class="input-error hidden">
+              ایمیل نامعتبر است !
+            </div>
+          </div>
+
+          <div class="relative w-full">
+            <input
+              autocomplete="off"
+              id="residence"
+              name="username"
+              type="text"
+              class="peer fixed-modal-user-information__input"
+              placeholder="محل اقامت "
+            />
+            <label
+              for="residence"
+              class="fixed-modal-user-information__label"
+            >
+              محل اقامت
+            </label>
+          </div>
+
+        </div>
+
+        <div class="relative mx-auto mt-8">
+          <input
+            autocomplete="off"
+            id="factor"
+            name="username"
+            type="text"
+            class="peer fixed-modal-user-information__input"
+            placeholder="شماره فاکتور داخلی"
+          />
+          <label
+            for="factor"
+            class="fixed-modal-user-information__label"
+            >شماره فاکتور داخلی</label
+          >
+          <div id="factor-error" class="input-error hidden">
+            شماره فاکتور اشتباه است !
+          </div>
+        </div>
+
+        <div class="relative mt-10 mb-3" data-te-input-wrapper-init>
+          <textarea
+            data-input-text
+            class="peer fixed-modal-user-information__textarea"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            placeholder="Your message"
+          ></textarea>
+          <label
+            for="tw-elements"
+            class="fixed-modal-user-information__textarea-label"
+            >توضیحات
+          </label>
+        </div>
+        <div class="mt-8 text-center">
+          <button
+            class="fixed-modal-user-information__button"
+            onclick="hideUserInsertData();showSansModal();"
+          >
+            ایجاد سبد خرید
+          </button>
+        </div>
+      </div>
+    </div>
+   
+    <!-- ================ select banks modal ================ -->
+    <div
+      class="fixed-modal"
+      id="selectBankModal"
+    >
+      <div class="container mx-auto mt-10">
+        <div class="fixed-modal-bank-option">
+          <button
+            class="fixed-modal-bank-option__close-button"
+            onclick="hideSelectBank()"
+          >
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </button>
+          <div class="flex items-center justify-between mt-5 mb-4">
+            <p class="flex items-center gap-2 py-4 text-gray-600">
+              <ion-icon class="w-6 h-6" name="card-outline"></ion-icon>
+              شارژ کیف پول
+            </p>
+            <p class="text-green-400">50000 تومان</p>
+          </div>
+          <hr />
+          <div class="animate-radio-buttons-container flex justify-center mt-10">
+            <form class="flex  items-center gap-5">
+               <div class="flex flex-col items-center gap-3">
+                  <img class="w-[40px]" src="../img/icons/banks/melat-bank.png" alt="">
+                  <label class="animate-radio-button-label">
+                    <input class="animate-radio-button" type="radio" name="radio" checked="">
+                    <span class="text-gray-800 text-[14px]">بانک ملی</span>
+                </label>
+               </div>
+               <div class="flex flex-col items-center gap-3">
+                <img class="w-[40px]" src="../img/icons/banks/tejarat-bank.png" alt="">
+                <label class="animate-radio-button-label">
+                  <input class="animate-radio-button" type="radio" name="radio">
+                  <span class="text-gray-800 text-[14px]">بانک تجارت</span>
+              </label>
+               </div>
+               <div class="flex flex-col items-center gap-3">
+                <img class="w-[40px]" src="../img/icons/banks/saman-bank.png" alt="">
+                <label class="animate-radio-button-label">
+                  <input class="animate-radio-button" type="radio" name="radio">
+                  <span class="text-gray-800 text-[14px]">بانک سامان</span>
+              </label>
+               </div>
+            </form>
+        </div>
+         <!-- modal button -->
+          <div class="flex justify-center mt-10">
+            <a
+            class="fixed-modal-bank-option__button w-1/2 text-center"
+            href="#"
+          >
+            پرداخت
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================== more information ======================= -->
+    <div
+      class="fixed-modal"
+      id="moreInfo"
+    >
+      <div class="container mx-auto mt-10">
+        <div class="fixed-modal-information">
+          <button
+            class="fixed-modal-information__close-button"
+            onclick="hideMoreInfoModal()"
+          >
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </button>
+          <div class="flex items-center justify-between mt-5 mb-1">
+            <p class="flex items-center gap-2 py-1 text-gray-600">
+              <span class="ion-social-buffer-outline text-[25px]"></span>
+              جزئیات این محصول
+            </p>
+          </div>
+          <hr class="mb-2" />
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div>
+              <div class="border border-1">
+                <h2 class="fixed-modal-information__title">متن تستی یک</h2>
+                <p class="fixed-modal-information__description">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                  گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و
+                  برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی
+                  می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و
+                  متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+                  الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان
+                  امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد
+                  وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای
+                  موجود طراحی اساسا مورد استفاده قرار گیرد.
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="border border-1">
+                <h2 class="fixed-modal-information__title">متن تستی یک</h2>
+
+                <ul class="fixed-modal-information__list">
+                  <li>مورد یک</li>
+                  <li>مورد یک</li>
+                  <li>مورد یک</li>
+                  <li>مورد یک</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="mt-2">
+            <div class="border border-1">
+              <h2 class="fixed-modal-information__title">متن تستی یک</h2>
+              <p class="fixed-modal-information__description">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و
+                برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی
+                می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و
+                متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+                الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید
+                داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان
+                مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود
+                طراحی اساسا مورد استفاده قرار گیرد.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================= END OF THE PAGE =========================== -->
+
+      <!-- ================== START THE END OF THE PAGE ===================== -->
+      <div class="end-of-page">
+        <div class="end-of-page__text">
+          <a href="#"> <img class="w-[20px]" src="../img/Tailwind_CSS_Logo.svg.png" alt="" /></a>
+          <span class="p-1 bg-transparent rounded-md"> تمامی حقوق برای تیلویند محفوظ است</span>
+        </div>
+      </div>
+
+      <!-- ================== START SOCIAL MEDIA BUTTON ===================== -->
+      <div class="social-media-fixed-button-container group">
+        <button class="social-media-fixed-button" id="socialNetwork">
+          <ion-icon
+            class="w-6 h-6 p-2 text-white rounded-full bg-secondary-400"
+            name="share-social-outline"
+          ></ion-icon>
+        </button>
+        <div class="social-media-fixed-btn">
+          <div class="social-media-fixed-content">
+            <a href="#"
+              ><ion-icon
+                class="social-media-content__twitter"
+                name="logo-twitter"
+              ></ion-icon
+            ></a>
+            <a href="#"
+              ><ion-icon
+                class="social-media-content__instagram"
+                name="logo-instagram"
+              ></ion-icon
+            ></a>
+            <a href="#"
+              ><ion-icon
+                class="social-media-content__facebook"
+                name="logo-facebook"
+              ></ion-icon
+            ></a>
+            <a href="#"
+              ><ion-icon
+                class="social-media-content__whatsapp"
+                name="logo-whatsapp"
+              ></ion-icon
+            ></a>
+          </div>
+        </div>
+      </div>
+  
+    <!-- ================== START THE SCROLL BACK TO TOP BUTTON ===================== -->
+      <button
+        class="scroll-back-to-top-btn duration-300"
+        onclick="topFunction()"
+        id="myScrollbackBtn"
+        title="Go to top"
+      >
+        <ion-icon
+          class="scroll-back-to-top-btn__icon"
+          name="chevron-up-outline"
+        ></ion-icon>
+      </button>
+
+    
+
+    <!-- ================ START THE TAGGING  ALERT ================== -->
+    <div class="tag-modal-container">
+        <div class="tag-modal-container__content">
+          <i class='bx bxs-check-circle'></i>
+            محصول شما نشانه گذاری شد
+        </div>
+    </div>
+
+    <!-- ======= START THE LOADER ======== -->
+    <div class="loader">
+        <img src="../img/icons/loader-gif.gif" alt="">
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"></script>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/modals.js"></script>
+    <script src="./js/sweetalert2@11.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/alerts.js"></script>
+    <script src="./js/flowbite.min.js"></script>
+    
+  </body>
+</html>

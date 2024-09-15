@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  style="
+    background-image: url('../img/main-wallpaper.png');
+    background-attachment: fixed;
+    background-size: cover;
+  "
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ورودبه حساب کاربری | تیلویند</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body dir="rtl">
+    
+        <div class="bg-white border border-gray-200 shadow-sm rounded-md p-4 fixed top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/2">
+            <div class="flex justify-center mb-10 flex-col text-center items-center gap-4">
+                <img class="w-[40px]" src="../img/Tailwind_CSS_Logo.svg.png" alt="" />
+                <p class="text-[12px] font-bold text-gray-400">کد تایید</p>
+              </div>
+              <form action="">
+                   <!--  ===== input forms ====== -->
+                <div class="flex items-center gap-3">
+                    <div class="form-code-confirmation-container">
+                        <input type="text" class="form-code-confirmation" maxlength="1">
+                    </div>
+
+                    <div class="form-code-confirmation-container">
+                        <input type="text" class="form-code-confirmation" maxlength="1">
+                    </div>
+
+                    <div class="form-code-confirmation-container">
+                        <input type="text" class="form-code-confirmation" maxlength="1">
+                    </div>
+
+                    <div class="form-code-confirmation-container">
+                        <input type="text" class="form-code-confirmation" maxlength="1">
+                    </div>
+
+                    <div class="form-code-confirmation-container">
+                        <input type="text" class="form-code-confirmation" maxlength="1">
+                    </div>
+                </div>
+
+                <!-- ====== timer ======= -->
+                <div class="text-[12px] text-blue-500 flex items-center justify-center gap-0.5 mt-5 timer">
+                    <span class="sec">59</span>
+                    :
+                    <span class="min">1</span>
+                </div>
+
+            <!-- ===== submit button ===== -->
+                <button class="bg-blue-500 hover:bg-blue-400 duration-200 text-white rounded-md p-2 w-full mt-10">تایید </button>
+              </form>
+        </div>
+
+  </body>
+
+
+
+ 
+   <!-- ======= START THE ALERT =========  -->
+  <div id="error-alert" class="error-alert">
+      <div class="flex items-center gap-4">
+          <i class='bx bx-error error-alert__icon'></i>
+          <div class="error-alert-content">
+              <h4 class="error-alert__title">خطا‌ !</h4>
+              <div class="error-alert__text">
+                  رمز عبور یا نام کاربری نامعتبر است !
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- ======= START THE SUCCESS ALERT =========  -->
+    <div id="success-alert" class="success-alert">
+      <div class="flex items-center gap-4">
+          <i class='bx bx-check-circle success-alert__icon'></i>
+          <div class="success-alert-content">
+              <h4 class="success-alert__title">خوش آمدید کاربر عزیز </h4>
+              <div class="success-alert__text">
+                 ورود شما موفقیت آمیز بود 
+              </div>
+          </div>
+      </div>
+  </div>
+
+  
+
+</html>
