@@ -1,5 +1,6 @@
 
 const sidebarBtn = document.querySelector("#sidebar-btn");
+//// new feature added to the jas file pulling the changes from the respository
 const sidebar = document.querySelector('#sidebar');
 const bgOverlay = document.querySelector(".bg-overlay");
 sidebarBtn.addEventListener("click" , () => {
