@@ -29,6 +29,15 @@ sidebarLinks.forEach(link => {
   }
 });
 
+// change sidebar image profile
+const sidebarProfileImage = document.querySelector(".sidebar-headr img")
+const changeSidebarImage = () => {
+  const savedImage = localStorage.getItem('savedImage');
+  if (savedImage) {
+      sidebarProfileImage.src = savedImage;
+  }
+}
+
 
 // navbar functionality 
 

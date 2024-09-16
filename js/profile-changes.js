@@ -37,3 +37,4 @@
         //  sidebarProfileImage.style.display = 'block';
      }
  });
+
