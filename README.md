@@ -54,11 +54,11 @@ Add more travel destinations by editing index.html or fetching from an API.
 
 Contributions are welcome! Feel free to submit issues and pull requests.
 
- # 📜 License
+ ## 📜 License
 
 This project is licensed under the MIT License.
 
- # 📧 Contact
+ ## 📧 Contact
 
 For any inquiries, reach out to [your email/contact info] or visit [your GitHub profile].
 
